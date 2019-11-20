@@ -1,6 +1,6 @@
 <template>
     <svg
-    xmlns="http://www;w3.org/2000/"
+    xmlns="http://www.w3c.org/2000/"
     :width="width"
     :height="height"
     :viewBox="`0 0 ${maxWidth} ${maxHeight}`"
@@ -13,10 +13,21 @@
       >
         {{ iconName }}
       </title>
-      
+
+      <!-- props : type / color -->
       <Background />
       <!-- <Background :type="'circle'" :color="'#EDB98A'" /> -->
       <!-- <Background :type="'transparent'" /> -->
+
+      <!-- props : color -->
+      <Body />
+      <!-- <Body :color="'darkBrown'"/> -->
+
+      <!-- props : type / color / graphic -->
+      <Clothes />
+      
+      <!-- props : mouthType -->
+      <Face />
 
     </svg>
 </template>
@@ -26,6 +37,9 @@
 // import { mapState } from 'vuex'
 
 import Background from './icons/background/Background'
+import Body from './icons/Body'
+import Clothes from './icons/clothes/Clothes'
+import Face from './icons/face/Face'
 
 // var accessories_1 = require("./top/accessories");
 // var clothes_1 = require("./clothes");
@@ -51,11 +65,19 @@ import Background from './icons/background/Background'
 // var AvatarStyle;
 
 const backgroundTypeEnum = ['circle', 'transparent']
+const skinColorEnum = ['tanned', 'yellow', 'pale', 'light', 'brown', 'darkBrown', 'dark']
+const clothesTypeEnum = ['blazerShirt', 'blazerSweater', 'collarSweater', 'graphicShirt', 'hoodie', 'overall', 'shirtCrewNeck', 'shirtScoopNeck', 'shirtVNeck']
+const clothesColorEnum = ['black', 'blue01', 'blue02', 'blue03', 'gray01', 'gray02', 'heather', 'pastelBlue', 'pastelGreen', 'pastelOrange', 'pastelRed', 'pastelYellow', 'pink', 'red', 'white']
+const clothesGraphicsTypeEnum = ['bat', 'cumbia', 'deer', 'diamond', 'hola', 'pizza', 'resist', 'selena', 'bear', 'skullOutline', 'skull']
+const mouthTypeEnum = ['concerned', 'default', 'disbelief', 'eating', 'grimace', 'sad', 'screamOpen', 'serious', 'smile', 'tongue', 'twinkle', 'vomit']
 
 export default {
   name: 'Avataaars',
   components: {
     Background,
+    Body,
+    Clothes,
+    Face,
   },
   props: {
     iconName: {
@@ -92,8 +114,32 @@ export default {
     //   }
     // },
     avatarStyle: {
+      // Background
       backgroundType: {type: String, enum: backgroundTypeEnum, default: 'circle', required: false},
       backgroundColor: {type: String, default: 'blue', required: false},
+
+      // Body
+      skinColor: {type: String, enum: skinColorEnum, default: 'light', required: false},
+
+      // Clothes
+      clothesType: {type: String, enum: clothesTypeEnum, default: 'graphicShirt', required: false},
+      clothesColor: {type: String, enum: clothesColorEnum, default: 'pink', required: false},
+      clothesGraphicsType: {type: String, enum: clothesGraphicsTypeEnum, default: 'pizza', required: false},
+      // ↳ Graphic
+
+      // Face
+      // 👁 Eyes
+      // ✏️ Eyebrow
+      mouthType: {type: String, enum: mouthTypeEnum, default: 'smile', required: false},
+
+      // Facial hair
+      // Facial Hair
+      // ↳ ✂️ Facial Hair Color
+
+      // Accessories
+      // Top
+      // ↳ 👓 Accessories
+      // ↳ 💈 Hair Color
     },
   },
   // computed: {
@@ -101,11 +147,11 @@ export default {
   //   //     sesssion: state => state.sesssion
   //   // }),
   // },
-  // data() {
-  //   return {
-        
-  //   }
-  // },
+  data() {
+    return {
+      
+    }
+  },
   // methods: {
 
   // },

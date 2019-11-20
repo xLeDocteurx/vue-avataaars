@@ -1,0 +1,106 @@
+<template>
+    <g id="mouth" transform="translate(2.000000, 52.000000)">
+        <mask v-for="(mask, mIndex) in selectedmouth.masks" :id="mask.id" :key="mask.id + 'mouth-mask-' + mIndex">
+            <path :d="mask.d" :transform="'translate(' + mask.offset.x + ', ' + mask.offset.y + ')'" :fill="mask.fill"></path>
+        </mask>
+        <g v-for="(geo, geoIndex) in selectedmouth.geometries" :id="geo.id" :key="geo.id + '-mouth-geometry-' + geoIndex">
+
+            <path v-if="geo.type == 'path'"
+            :transform="'translate(' + geo.offset.x + ', ' + geo.offset.y + ')'"
+            :fill-opacity="geo.fillOpacity ? geo.fillOpacity : null"
+            :fill="geo.fill ? geo.fill : null"
+            :fill-rule="geo.fillRule ? geo.fillRule : null"
+            :mask="geo.mask ? 'url(#' + geo.mask + ')' : null"
+
+            :d="geo.d"
+            ></path>
+            <circle v-else-if="geo.type == 'circle'"
+            :transform="'translate(' + geo.offset.x + ', ' + geo.offset.y + ')'"
+            :fill-opacity="geo.fillOpacity ? geo.fillOpacity : null"
+            :fill="geo.fill ? geo.fill : null"
+            :fill-rule="geo.fillRule ? geo.fillRule : null"
+            :mask="geo.mask ? 'url(#' + geo.mask + ')' : null"
+
+            :cx="geo.cx"
+            :cy="geo.cy"
+            :r="geo.r"
+            ></circle>
+            <rect v-else-if="geo.type == 'rect'"
+            :transform="'translate(' + geo.offset.x + ', ' + geo.offset.y + ')'"
+            :fill-opacity="geo.fillOpacity ? geo.fillOpacity : null"
+            :fill="geo.fill ? geo.fill : null"
+            :fill-rule="geo.fillRule ? geo.fillRule : null"
+            :mask="geo.mask ? 'url(#' + geo.mask + ')' : null"
+
+            :x="geo.x"
+            :y="geo.y"
+            :width="geo.width"
+            :height="geo.height"
+            :rx="geo.rx"
+            ></rect>
+            <!--  -->
+            <g v-else-if="geo.type == 'g'"
+            :fill-opacity="geo.fillOpacity ? geo.fillOpacity : null"
+            :fill="geo.fill ? geo.fill : null"
+            :fill-rule="geo.fillRule ? geo.fillRule : null"
+            :mask="geo.mask ? 'url(#' + geo.mask + ')' : null"
+            >
+                <circle v-for="(element, elIndex) in geo.elements"
+                :key="geo.id + '-element-' + elIndex"
+                :transform="'translate(' + geo.offset.x + ', ' + geo.offset.y + ')'"
+
+                :cx="element.cx"
+                :cy="element.cy"
+                :r="element.r"
+                ></circle>
+            </g>
+
+        </g>
+
+    </g>
+</template>
+
+
+<script>
+import smileJSON from './Smile.json'
+
+export default {
+  name: 'Mouth',
+  props: {
+      type: {
+          type: String,
+          default: 'smile',
+          required: false,
+      }
+  },
+  computed: {
+      selectedmouth() {
+          return this.types[this.type]
+      }
+  },
+  data() {
+    return {
+        types: {
+            concerned: null,
+            default: null,
+            disbelief: null,
+            eating: null,
+            grimace: null,
+            sad: null,
+            screamOpen: null,
+            serious: null,
+            smile: smileJSON,
+            tongue: null,
+            twinkle: null,
+            vomit: null,
+        },
+
+    }
+  },
+}
+</script>
+
+
+<style scoped>
+
+</style>

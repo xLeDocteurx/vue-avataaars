@@ -1,7 +1,6 @@
 <template>
-  <g :fill="color">
-    <!-- <slot /> -->
-    <circle v-if="type == 'circle'" circle :cx="circle.cx" :cy="circle.cy" :r="circle.r"/>
+  <g id="background" :fill="color">
+    <circle v-if="type == 'circle'" :transform="circle.transform" :cx="circle.cx" :cy="circle.cy" :r="circle.r"/>
   </g>
 </template>
 
