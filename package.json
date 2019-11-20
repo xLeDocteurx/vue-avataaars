@@ -1,0 +1,29 @@
+{
+  "name": "vue-avataaars",
+  "version": "0.0.1",
+  "description": "A vue js port of the react-avataaars library from getavataaars.com",
+  "main": "Avataaars.vue",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xLeDocteurx/vue-avataaars.git"
+  },
+  "keywords": [
+    "avataaars",
+    "avatar",
+    "avatars",
+    "editor",
+    "vue",
+    "vuejs",
+    "vue-js",
+    "component"
+  ],
+  "author": "xLeDocteurx",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xLeDocteurx/vue-avataaars/issues"
+  },
+  "homepage": "https://github.com/xLeDocteurx/vue-avataaars#readme"
+}
