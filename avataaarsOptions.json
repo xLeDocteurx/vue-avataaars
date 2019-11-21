@@ -1,0 +1,12 @@
+{
+    "backgroundType": ["circle", "transparent"],
+    "backgroundColor": ["black", "blue01", "blue02", "blue03", "gray01", "gray02", "heather", "pastelBlue", "pastelGreen", "pastelOrange", "pastelRed", "pastelYellow", "pink", "red", "white"],
+
+    "skinColor": ["tanned", "yellow", "pale", "light", "brown", "darkBrown", "dark"],
+
+    "clothesType": ["blazerShirt", "blazerSweater", "collarSweater", "graphicShirt", "hoodie", "overall", "shirtCrewNeck", "shirtScoopNeck", "shirtVNeck"],
+    "clothesColor": ["black", "blue01", "blue02", "blue03", "gray01", "gray02", "heather", "pastelBlue", "pastelGreen", "pastelOrange", "pastelRed", "pastelYellow", "pink", "red", "white"],
+    "clothesGraphicsType": ["none", "bat", "cumbia", "deer", "diamond", "hola", "pizza", "resist", "selena", "bear", "skullOutline", "skull"],
+    
+    "mouthType": ["concerned", "default", "disbelief", "eating", "grimace", "sad", "screamOpen", "serious", "smile", "tongue", "twinkle", "vomit"]
+}
