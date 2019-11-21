@@ -15,16 +15,16 @@
       </title>
 
       <!-- props : type / color -->
-      <Background />
+      <Background :type="avatarStyle.backgroundType" :color="avatarStyle.backgroundColor" />
       <!-- <Background :type="'circle'" :color="'#EDB98A'" /> -->
       <!-- <Background :type="'transparent'" /> -->
 
       <!-- props : color -->
-      <Body />
+      <Body :color="avatarStyle.skinColor" />
       <!-- <Body :color="'darkBrown'"/> -->
 
       <!-- props : type / color / graphic -->
-      <Clothes />
+      <Clothes :type="avatarStyle.clothesType" :color="avatarStyle.clothesColor" :graphic="avatarStyle.clothesGraphicsType"/>
       
       <!-- props : mouthType -->
       <Face />
@@ -64,12 +64,14 @@ import Face from './icons/face/Face'
 // var Skin_1 = require("./Skin");
 // var AvatarStyle;
 
-const backgroundTypeEnum = ['circle', 'transparent']
-const skinColorEnum = ['tanned', 'yellow', 'pale', 'light', 'brown', 'darkBrown', 'dark']
-const clothesTypeEnum = ['blazerShirt', 'blazerSweater', 'collarSweater', 'graphicShirt', 'hoodie', 'overall', 'shirtCrewNeck', 'shirtScoopNeck', 'shirtVNeck']
-const clothesColorEnum = ['black', 'blue01', 'blue02', 'blue03', 'gray01', 'gray02', 'heather', 'pastelBlue', 'pastelGreen', 'pastelOrange', 'pastelRed', 'pastelYellow', 'pink', 'red', 'white']
-const clothesGraphicsTypeEnum = ['bat', 'cumbia', 'deer', 'diamond', 'hola', 'pizza', 'resist', 'selena', 'bear', 'skullOutline', 'skull']
-const mouthTypeEnum = ['concerned', 'default', 'disbelief', 'eating', 'grimace', 'sad', 'screamOpen', 'serious', 'smile', 'tongue', 'twinkle', 'vomit']
+import optionsJSON from './avataaarsOptions.json'
+
+// const backgroundTypeEnum = ['circle', 'transparent']
+// const skinColorEnum = ['tanned', 'yellow', 'pale', 'light', 'brown', 'darkBrown', 'dark']
+// const clothesTypeEnum = ['blazerShirt', 'blazerSweater', 'collarSweater', 'graphicShirt', 'hoodie', 'overall', 'shirtCrewNeck', 'shirtScoopNeck', 'shirtVNeck']
+// const clothesColorEnum = ['black', 'blue01', 'blue02', 'blue03', 'gray01', 'gray02', 'heather', 'pastelBlue', 'pastelGreen', 'pastelOrange', 'pastelRed', 'pastelYellow', 'pink', 'red', 'white']
+// const clothesGraphicsTypeEnum = ['bat', 'cumbia', 'deer', 'diamond', 'hola', 'pizza', 'resist', 'selena', 'bear', 'skullOutline', 'skull']
+// const mouthTypeEnum = ['concerned', 'default', 'disbelief', 'eating', 'grimace', 'sad', 'screamOpen', 'serious', 'smile', 'tongue', 'twinkle', 'vomit']
 
 export default {
   name: 'Avataaars',
@@ -105,32 +107,24 @@ export default {
       default: 280,
       required: false,
     },
-    // avatarStyle: {
-    //   type: Object,
-    //   required: false,
-    //   default: {
-    //     backgroundType: {type: String, enum: backgroundTypeEnum, default: 'circle', required: false},
-    //     backgroundColor: {type: String, default: 'blue', required: false},
-    //   }
-    // },
     avatarStyle: {
       // Background
-      backgroundType: {type: String, enum: backgroundTypeEnum, default: 'circle', required: false},
-      backgroundColor: {type: String, default: 'blue', required: false},
+      backgroundType: {type: String, enum: optionsJSON.backgroundType, default: 'circle', required: false},
+      backgroundColor: {type: String, enum: optionsJSON.backgroundColor, default: 'blue01', required: false},
 
       // Body
-      skinColor: {type: String, enum: skinColorEnum, default: 'light', required: false},
+      skinColor: {type: String, enum: optionsJSON.skinColor, default: 'light', required: false},
 
       // Clothes
-      clothesType: {type: String, enum: clothesTypeEnum, default: 'graphicShirt', required: false},
-      clothesColor: {type: String, enum: clothesColorEnum, default: 'pink', required: false},
-      clothesGraphicsType: {type: String, enum: clothesGraphicsTypeEnum, default: 'pizza', required: false},
+      clothesType: {type: String, enum: optionsJSON.clothesType, default: 'graphicShirt', required: false},
+      clothesColor: {type: String, enum: optionsJSON.clothesColor, default: 'pink', required: false},
+      clothesGraphicsType: {type: String, enum: optionsJSON.clothesGraphicsType, default: 'pizza', required: false},
       // ↳ Graphic
 
       // Face
       // 👁 Eyes
       // ✏️ Eyebrow
-      mouthType: {type: String, enum: mouthTypeEnum, default: 'smile', required: false},
+      mouthType: {type: String, enum: optionsJSON.mouthType, default: 'smile', required: false},
 
       // Facial hair
       // Facial Hair
@@ -149,14 +143,17 @@ export default {
   // },
   data() {
     return {
-      
+
     }
   },
   // methods: {
 
   // },
   // created() {
-  //   console.log('A vue created')
+
+  // },
+  // mounted() {
+
   // },
   // beforeUpdate() {
 

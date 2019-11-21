@@ -1,13 +1,80 @@
 <template>
     <g id="clothes" transform="translate(0.000000, 170.000000)">
-        <path 
+        <mask v-for="(mask, mIndex) in selectedClothes.masks" :id="mask.id" :key="mask.id + 'clothes-mask-' + mIndex">
+            <path :d="mask.d" :transform="'translate(' + mask.offset.x + ', ' + mask.offset.y + ')'" :fill="mask.fill"></path>
+        </mask>
+        <g v-for="(geo, geoIndex) in selectedClothes.geometries" :id="geo.id" :key="geo.id + '-clothes-geometry-' + geoIndex">
+            <path v-if="geo.type == 'path'"
+            :transform="'translate(' + geo.offset.x + ', ' + geo.offset.y + ')' + (geo.scale ? ' scale(' + geo.scale.x + ', ' + geo.scale.y + ')' : '')"
+            :fill-opacity="geo.fillOpacity ? geo.fillOpacity : null"
+            :fill="geo.fill ? geo.fill : colors[color]"
+            :fill-rule="geo.fillRule ? geo.fillRule : null"
+            :mask="geo.mask ? 'url(#' + geo.mask + ')' : null"
+
+            :d="geo.d"
+            ></path>
+            <circle v-else-if="geo.type == 'circle'"
+            :transform="'translate(' + geo.offset.x + ', ' + geo.offset.y + ')' + (geo.scale ? ' scale(' + geo.scale.x + ', ' + geo.scale.y + ')' : '')"
+            :fill-opacity="geo.fillOpacity ? geo.fillOpacity : null"
+            :fill="geo.fill ? geo.fill : colors[color]"
+            :fill-rule="geo.fillRule ? geo.fillRule : null"
+            :mask="geo.mask ? 'url(#' + geo.mask + ')' : null"
+
+            :cx="geo.cx"
+            :cy="geo.cy"
+            :r="geo.r"
+            ></circle>
+            <ellipse v-else-if="geo.type == 'ellipse'"
+            :transform="'translate(' + geo.offset.x + ', ' + geo.offset.y + ')' + (geo.scale ? ' scale(' + geo.scale.x + ', ' + geo.scale.y + ')' : '')"
+            :fill-opacity="geo.fillOpacity ? geo.fillOpacity : null"
+            :fill="geo.fill ? geo.fill : null"
+            :fill-rule="geo.fillRule ? geo.fillRule : null"
+            :mask="geo.mask ? 'url(#' + geo.mask + ')' : null"
+
+            :cx="geo.cx"
+            :cy="geo.cy"
+            :rx="geo.rx"
+            :ry="geo.ry"
+            ></ellipse>
+            <rect v-else-if="geo.type == 'rect'"
+            :transform="'translate(' + geo.offset.x + ', ' + geo.offset.y + ')' + (geo.scale ? ' scale(' + geo.scale.x + ', ' + geo.scale.y + ')' : '')"
+            :fill-opacity="geo.fillOpacity ? geo.fillOpacity : null"
+            :fill="geo.fill ? geo.fill : colors[color]"
+            :fill-rule="geo.fillRule ? geo.fillRule : null"
+            :mask="geo.mask ? 'url(#' + geo.mask + ')' : null"
+
+            :x="geo.x"
+            :y="geo.y"
+            :width="geo.width"
+            :height="geo.height"
+            :rx="geo.rx"
+            ></rect>
+            <!--  -->
+            <g v-else-if="geo.type == 'g'"
+            :fill-opacity="geo.fillOpacity ? geo.fillOpacity : null"
+            :fill="geo.fill ? geo.fill : colors[color]"
+            :fill-rule="geo.fillRule ? geo.fillRule : null"
+            :mask="geo.mask ? 'url(#' + geo.mask + ')' : null"
+            >
+                <circle v-for="(element, elIndex) in geo.elements"
+                :key="geo.id + '-element-' + elIndex"
+                :transform="'translate(' + geo.offset.x + ', ' + geo.offset.y + ')' + (geo.scale ? ' scale(' + geo.scale.x + ', ' + geo.scale.y + ')' : '')"
+
+                :cx="element.cx"
+                :cy="element.cy"
+                :r="element.r"
+                ></circle>
+            </g>
+
+        </g>
+        <!-- <path 
         :d="types[type].d"
         :fill="colors[color]"
-        ></path>
+        ></path> -->
 
         <!-- Graphic -->
         <!-- props : type -->
-        <Graphics />
+        <Graphics :type="graphic" />
     </g>
 </template>
 
@@ -16,6 +83,14 @@
 import Graphics from './Graphics'
 
 import graphicShirtJSON from './GraphicShirt.json'
+import blazerShirtJSON from './BlazerShirt.json'
+import blazerSweaterJSON from './BlazerSweater.json'
+import collarSweaterJSON from './CollarSweater.json'
+import HoodieJSON from './Hoodie.json'
+import OverallJSON from './Overall.json'
+import ShirtCrewNeckJSON from './ShirtCrewNeck.json'
+import ShirtScoopNeckJSON from './ShirtScoopNeck.json'
+import ShirtVNeckJSON from './ShirtVNeck.json'
 
 export default {
   name: 'Clothes',
@@ -39,18 +114,23 @@ export default {
       required: false,
     },
   },
+  computed: {
+      selectedClothes() {
+          return this.types[this.type]
+      }
+  },
   data() {
     return {
       types: {
-        blazerShirt: null,
-        blazerSweater: null,
-        collarSweater: null,
+        blazerShirt: blazerShirtJSON,
+        blazerSweater: blazerSweaterJSON,
+        collarSweater: collarSweaterJSON,
         graphicShirt: graphicShirtJSON,
-        hoodie: null,
-        overall: null,
-        shirtCrewNeck: null,
-        shirtScoopNeck: null,
-        shirtVNeck: null,
+        hoodie: HoodieJSON,
+        overall: OverallJSON,
+        shirtCrewNeck: ShirtCrewNeckJSON,
+        shirtScoopNeck: ShirtScoopNeckJSON,
+        shirtVNeck: ShirtVNeckJSON,
       },
       colors: {
         black: '#262E33',

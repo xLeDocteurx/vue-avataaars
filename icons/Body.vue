@@ -41,7 +41,7 @@ export default {
             light:'#EDB98A',
             brown:'#D08B5B',
             darkBrown:'#AE5D29',
-            black:'#614335',
+            dark:'#614335',
         },
         body: bodyJSON.body,
         neckShadow: bodyJSON.neckShadow,

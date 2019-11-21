@@ -25,6 +25,7 @@ export default {
   data() {
       return {
         types: {
+          none: graphicsJSON.none,
           bat: null,
           cumbia: null,
           deer: null,
