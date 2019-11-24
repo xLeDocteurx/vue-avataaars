@@ -19,6 +19,9 @@ This is a port from the core React component for [Avataaars Generator](https://g
 Import the Avataaars component. Pass it an object called "avatarOptions" with some parameters. Let the magic happen.
 
 ## Installation
+```
+
+```
 
 ## Usage
 
