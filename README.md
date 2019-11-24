@@ -35,7 +35,7 @@ Import the Avataaars component. Pass it an object called "avatarOptions" with so
 
 ```
 
-### Roadmap to 0.0.1
+### Roadmap to 0.0.1 and NPM
 - Basic Avataaars component with all the svg assets.
 
 ### Roadmap to 0.1.0
