@@ -35,7 +35,7 @@ Import the Avataaars component. Pass it an object called "avatarOptions" with so
 ## Usage
 
 - Using the Avataaars component only :
-```
+```vue
  <template>
   <Avataaars :avatarOptions="{
     backgroundType: selectedBackgroundType,
@@ -65,7 +65,7 @@ export default {
 ```
 
 - Using the Avataaars editor in addition to the Avataaars component :
-```
+```vue
 
 ```
 
