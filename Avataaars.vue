@@ -14,20 +14,17 @@
         {{ iconName }}
       </title>
 
-      <!-- props : type / color -->
-      <Background :type="avatarStyle.backgroundType" :color="avatarStyle.backgroundColor" />
-      <!-- <Background :type="'circle'" :color="'#EDB98A'" /> -->
-      <!-- <Background :type="'transparent'" /> -->
+      <Background :type="avatarOptions.backgroundType" :color="avatarOptions.backgroundColor" />
 
-      <!-- props : color -->
-      <Body :color="avatarStyle.skinColor" />
-      <!-- <Body :color="'darkBrown'"/> -->
+      <Body :color="avatarOptions.skinColor" />
 
-      <!-- props : type / color / graphic -->
-      <Clothes :type="avatarStyle.clothesType" :color="avatarStyle.clothesColor" :graphic="avatarStyle.clothesGraphicsType"/>
+      <Clothes :type="avatarOptions.clothesType" :color="avatarOptions.clothesColor" :graphic="avatarOptions.clothesGraphicsType"/>
       
-      <!-- props : mouthType -->
-      <Face />
+      <Face :eyebrowType="avatarOptions.eyebrowType" :eyesType="avatarOptions.eyesType" :mouthType="avatarOptions.mouthType" :facialHairType="avatarOptions.facialHairType" :facialFairColor="avatarOptions.facialHairColor" />
+
+      <Accessories :type="avatarOptions.accessoriesType" />
+
+      <Top :type="avatarOptions.topType" :color="avatarOptions.topColor" />
 
     </svg>
 </template>
@@ -40,38 +37,10 @@ import Background from './icons/background/Background'
 import Body from './icons/Body'
 import Clothes from './icons/clothes/Clothes'
 import Face from './icons/face/Face'
-
-// var accessories_1 = require("./top/accessories");
-// var clothes_1 = require("./clothes");
-// var face_1 = require("./face");
-// var Skin_1 = require("./Skin");
-// var top_1 = require("./top");
-// var AvatarStyle;
-// (function (AvatarStyle) {
-//     AvatarStyle["Circle"] = "Circle";
-//     AvatarStyle["Transparent"] = "Transparent";
-// })(AvatarStyle = exports.AvatarStyle || (exports.AvatarStyle = {}));
-
-// var clothes_1 = require("./clothes");
-// var Graphics_1 = require("./clothes/Graphics");
-// var accessories_1 = require("./top/accessories");
-// var facialHair_1 = require("./top/facialHair");
-// var top_1 = require("./top");
-// var eyes_1 = require("./face/eyes");
-// var eyebrow_1 = require("./face/eyebrow");
-// var mouth_1 = require("./face/mouth");
-// var nose_1 = require("./face/nose");
-// var Skin_1 = require("./Skin");
-// var AvatarStyle;
+import Accessories from './icons/top/accessories/Accessories'
+import Top from './icons/top/Top'
 
 import optionsJSON from './avataaarsOptions.json'
-
-// const backgroundTypeEnum = ['circle', 'transparent']
-// const skinColorEnum = ['tanned', 'yellow', 'pale', 'light', 'brown', 'darkBrown', 'dark']
-// const clothesTypeEnum = ['blazerShirt', 'blazerSweater', 'collarSweater', 'graphicShirt', 'hoodie', 'overall', 'shirtCrewNeck', 'shirtScoopNeck', 'shirtVNeck']
-// const clothesColorEnum = ['black', 'blue01', 'blue02', 'blue03', 'gray01', 'gray02', 'heather', 'pastelBlue', 'pastelGreen', 'pastelOrange', 'pastelRed', 'pastelYellow', 'pink', 'red', 'white']
-// const clothesGraphicsTypeEnum = ['bat', 'cumbia', 'deer', 'diamond', 'hola', 'pizza', 'resist', 'selena', 'bear', 'skullOutline', 'skull']
-// const mouthTypeEnum = ['concerned', 'default', 'disbelief', 'eating', 'grimace', 'sad', 'screamOpen', 'serious', 'smile', 'tongue', 'twinkle', 'vomit']
 
 export default {
   name: 'Avataaars',
@@ -80,6 +49,8 @@ export default {
     Body,
     Clothes,
     Face,
+    Accessories,
+    Top,
   },
   props: {
     iconName: {
@@ -107,7 +78,7 @@ export default {
       default: 280,
       required: false,
     },
-    avatarStyle: {
+    avatarOptions: {
       // Background
       backgroundType: {type: String, enum: optionsJSON.backgroundType, default: 'circle', required: false},
       backgroundColor: {type: String, enum: optionsJSON.backgroundColor, default: 'blue01', required: false},
@@ -116,24 +87,25 @@ export default {
       skinColor: {type: String, enum: optionsJSON.skinColor, default: 'light', required: false},
 
       // Clothes
-      clothesType: {type: String, enum: optionsJSON.clothesType, default: 'graphicShirt', required: false},
+      clothesType: {type: String, enum: optionsJSON.clothesType, default: 'hoodie', required: false},
       clothesColor: {type: String, enum: optionsJSON.clothesColor, default: 'pink', required: false},
       clothesGraphicsType: {type: String, enum: optionsJSON.clothesGraphicsType, default: 'pizza', required: false},
-      // ↳ Graphic
 
       // Face
-      // 👁 Eyes
-      // ✏️ Eyebrow
+      eyebrowType: {type: String, enum: optionsJSON.eyebrowType, default: 'raisedExcited', required: false},
+      eyesType: {type: String, enum: optionsJSON.eyesType, default: 'squint', required: false},
       mouthType: {type: String, enum: optionsJSON.mouthType, default: 'smile', required: false},
 
       // Facial hair
-      // Facial Hair
-      // ↳ ✂️ Facial Hair Color
+      facialHairType: {type: String, enum: optionsJSON.facialHairType, default: 'beardLight', required: false},
+      facialHairColor: {type: String, enum: optionsJSON.facialHairColor, default: 'brownDark', required: false},
 
+      // Hair or Hat
+      topType: {type: String, enum: optionsJSON.topType, default: 'none', required: false},
+      topColor: {type: String, enum: optionsJSON.topColor, default: 'brownDark'},
+      
       // Accessories
-      // Top
-      // ↳ 👓 Accessories
-      // ↳ 💈 Hair Color
+      accessoriesType: {type: String, enum: optionsJSON.accessoriesType, default: 'round', required: false},
     },
   },
   // computed: {

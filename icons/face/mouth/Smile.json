@@ -35,29 +35,30 @@
             "rx": 5
         },
         {
-            "offset": {"x": 38.000000, "y": 24.000000},
-            "id": "tongue",
-            "type": "g",
-            "strokeWidth": "1",
+            "offset": {"x": 0.000000, "y": 0.000000},
+            "id": "tongue-a",
+            "type": "circle",
             
             "fill": "#FF4F6D",
             "fillRule": "evenodd",
             "mask": "smile-mask",
 
-            "elements": [
-                {
-                    "type": "circle",
-                    "cx": 11,
-                    "cy": 11,
-                    "r": 11
-                },
-                {
-                    "type": "circle",
-                    "cx": 21,
-                    "cy": 11,
-                    "r": 11
-                }
-            ]
+            "cx": 49,
+            "cy": 35,
+            "r": 11
+        },
+        {
+            "offset": {"x": 0.000000, "y": 0.000000},
+            "id": "tongue-b",
+            "type": "circle",
+            
+            "fill": "#FF4F6D",
+            "fillRule": "evenodd",
+            "mask": "smile-mask",
+
+            "cx": 59,
+            "cy": 35,
+            "r": 11
         }
     ]
 }
