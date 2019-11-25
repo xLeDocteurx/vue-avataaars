@@ -1,5 +1,5 @@
-[![Gitter](https://img.shields.io/gitter/room/cvue-avataaars/community)](https://gitter.im/vue-avataaars/community)
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-ff69b4.svg)](https://github.com/xLeDocteurx/vue-avataaars/pulls)
+[![Gitter](https://img.shields.io/gitter/room/cvue-avataaars/community)](https://gitter.im/vue-avataaars/community)
 [![GitHub](https://img.shields.io/github/license/xLeDocteurx/vue-avataaars)](https://github.com/xLeDocteurx/vue-avataaars/pulls)
 
 # Vue js component for Avataaars
