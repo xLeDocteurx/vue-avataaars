@@ -22,6 +22,9 @@ This is a port from  Sketch library [Avataaars](https://avataaars.com/) designed
 - Basic Avataaars component with all the svg assets.
 
 #### Roadmap to 0.1.0
+- Feed the Avataaars component with a hash to procedurally generate an avatar.
+
+#### Roadmap to 0.2.0
 - Fully customizable Avataaars editor.
 
 #### Roadmap to success
