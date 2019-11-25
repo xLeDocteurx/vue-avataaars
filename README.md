@@ -1,6 +1,5 @@
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-ff69b4.svg)](https://github.com/xLeDocteurx/vue-avataaars/pulls)
 [![GitHub](https://img.shields.io/github/license/xLeDocteurx/vue-avataaars)](https://github.com/xLeDocteurx/vue-avataaars/pulls)
-![GitHub followers](https://img.shields.io/github/followers/xLeDocteurx?label=Follow%20me%20%21&style=social)
 
 # Vue js component for Avataaars
 (Work in progress)
