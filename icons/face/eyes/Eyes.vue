@@ -58,7 +58,18 @@
 
 
 <script>
+import CloseJSON from './Close.json'
+import CryJSON from './Cry.json'
+import DefaultJSON from './Default.json'
+import DizzyJSON from './Dizzy.json'
+import EyeRollJSON from './EyeRoll.json'
+import HappyJSON from './Happy.json'
+import HeartsJSON from './Hearts.json'
+import SideJSON from './Side.json'
 import SquintJSON from './Squint.json'
+import SurprisedJSON from './Surprised.json'
+import WinkJSON from './Wink.json'
+import WinkWackyJSON from './WinkWacky.json'
 
 export default {
   name: 'Eyes',
@@ -77,18 +88,18 @@ export default {
   data() {
     return {
         types: {
-            close: null,
-            cry: null,
-            default: null,
-            dizzy: null,
-            eyeroll: null,
-            happy: null,
-            hearts: null,
-            side: null,
+            close: CloseJSON,
+            cry: CryJSON,
+            default: DefaultJSON,
+            dizzy: DizzyJSON,
+            eyeroll: EyeRollJSON,
+            happy: HappyJSON,
+            hearts: HeartsJSON,
+            side: SideJSON,
             squint: SquintJSON,
-            surprised: null,
-            wink: null,
-            winkWacky: null,
+            surprised: SurprisedJSON,
+            wink: WinkJSON,
+            winkWacky: WinkWackyJSON,
         },
     }
   },

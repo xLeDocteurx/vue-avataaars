@@ -1,0 +1,32 @@
+{
+    "masks": [
+
+    ],
+    "geometries": [
+        {
+            "offset": {"x": 16.000000, "y": 13.000000},
+            "id": "eye-a",
+            "type": "circle",
+            
+            "fill": "#000000",
+            "fillOpacity": 0.699999988,
+
+            "cx": 14,
+            "cy": 10,
+            "r": 6
+        },
+        {
+            "offset": {"x": 68.000000, "y": 13.000000},
+            "id": "eye-b",
+            "type": "circle",
+            
+            "fill": "#000000",
+            "fillOpacity": 0.699999988,
+
+            "cx": 14,
+            "cy": 10,
+            "r": 6
+        }
+
+    ]
+}

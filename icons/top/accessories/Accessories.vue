@@ -78,7 +78,7 @@ export default {
   data() {
     return {
         types: {
-            blank: blankJSON,
+            none: blankJSON,
             kurt: null,
             prescription01: null,
             prescription02: null,

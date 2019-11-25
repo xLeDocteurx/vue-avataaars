@@ -1,0 +1,54 @@
+{
+    "masks": [
+
+    ],
+    "geometries": [
+        {
+            "offset": {"x": 0.000000, "y": 0.000000},
+            "id": "eyeball-a",
+            "type": "circle",
+            
+            "fill": "#FFFFFF",
+
+            "cx": 30,
+            "cy": 22,
+            "r": 14
+        },
+        {
+            "offset": {"x": 0.000000, "y": 0.000000},
+            "id": "eyeball-b",
+            "type": "circle",
+            
+            "fill": "#FFFFFF",
+
+            "cx": 82,
+            "cy": 22,
+            "r": 14
+        },
+        {
+            "offset": {"x": 0.000000, "y": 0.000000},
+            "id": "eye-a",
+            "type": "circle",
+            
+            "fill": "#000000",
+            "fillOpacity": 0.699999988,
+
+            "cx": 30,
+            "cy": 14,
+            "r": 6
+        },
+        {
+            "offset": {"x": 0.000000, "y": 0.000000},
+            "id": "eye-b",
+            "type": "circle",
+            
+            "fill": "#000000",
+            "fillOpacity": 0.699999988,
+
+            "cx": 82,
+            "cy": 14,
+            "r": 6
+        }
+
+    ]
+}

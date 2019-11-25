@@ -21,6 +21,8 @@
           clothesType: selectedClothesType,
           clothesColor: selectedClothesColor,
           clothesGraphicsType: selectedClothesGraphicType,
+          eyesType: selectedEyesType,
+          eyebrowType: selectedEyebrowType,
           mouthType: selectedMouthType,
           facialHairType: selectedFacialHairType,
           facialHairColor: selectedFacialHairColor,
@@ -33,7 +35,7 @@
       <b-col sm="12" md="8">
 
         <b-card no-body class="mt-3">
-          <b-tabs content-class="mt-3" card>
+          <b-tabs content-class="mt-3" pills card>
             <b-tab title="Body & Background">
               <b-form-group label="Skin Color">
                 <b-form-select 
@@ -57,31 +59,8 @@
                 ></b-form-select>
               </b-form-group>
             </b-tab>
-            <b-tab title="Clothes">
-              <b-form-group label="Clothes Type">
-                <b-form-select 
-                size="sm" 
-                v-model="selectedClothesType" 
-                :options="options.clothesType" 
-                ></b-form-select>
-              </b-form-group>
-              <b-form-group label="↳ Clothes Color">
-                <b-form-select 
-                size="sm" 
-                v-model="selectedClothesColor" 
-                :options="options.clothesColor" 
-                ></b-form-select>
-              </b-form-group>
-              <b-form-group label="↳ !!! Clothes Graphic">
-                <b-form-select 
-                size="sm" 
-                v-model="selectedClothesGraphicType" 
-                :options="options.clothesGraphicsType" 
-                ></b-form-select>
-              </b-form-group>
-            </b-tab>
             <b-tab title="Face">
-              <b-form-group label="!!! Eyes Type">
+              <b-form-group label="Eyes Type">
                 <b-form-select 
                 size="sm" 
                 v-model="selectedEyesType" 
@@ -117,6 +96,15 @@
                 ></b-form-select>
               </b-form-group>
             </b-tab>
+            <b-tab title="Accessories">
+              <b-form-group label="!!! Accessories">
+                <b-form-select 
+                size="sm" 
+                v-model="selectedAccessoriesType" 
+                :options="options.accessoriesType" 
+                ></b-form-select>
+              </b-form-group>
+            </b-tab>
             <b-tab title="Hair or Top">
               <b-form-group label="!!! Top Type">
                 <b-form-select 
@@ -133,12 +121,26 @@
                 ></b-form-select>
               </b-form-group>
             </b-tab>
-            <b-tab title="Accessories">
-              <b-form-group label="!!! Accessories">
+            <b-tab title="Clothes">
+              <b-form-group label="Clothes Type">
                 <b-form-select 
                 size="sm" 
-                v-model="selectedAccessoriesType" 
-                :options="options.accessoriesType" 
+                v-model="selectedClothesType" 
+                :options="options.clothesType" 
+                ></b-form-select>
+              </b-form-group>
+              <b-form-group label="↳ Clothes Color">
+                <b-form-select 
+                size="sm" 
+                v-model="selectedClothesColor" 
+                :options="options.clothesColor" 
+                ></b-form-select>
+              </b-form-group>
+              <b-form-group label="↳ !!! Clothes Graphic">
+                <b-form-select 
+                size="sm" 
+                v-model="selectedClothesGraphicType" 
+                :options="options.clothesGraphicsType" 
                 ></b-form-select>
               </b-form-group>
             </b-tab>
