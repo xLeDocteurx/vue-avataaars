@@ -1,3 +1,5 @@
+[![PRs welcome](https://img.shields.io/badge/PRs-welcome-ff69b4.svg)](https://github.com/xLeDocteurx/vue-avataaars/pulls)
+
 # Vue js component for Avataaars
 (Work in progress)
 
