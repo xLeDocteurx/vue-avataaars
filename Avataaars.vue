@@ -14,17 +14,17 @@
         {{ iconName }}
       </title>
 
-      <Background :type="avatarOptions.backgroundType" :color="avatarOptions.backgroundColor" />
+      <Background :type="avatarOptions ? avatarOptions.backgroundType : options.backgroundType[Math.floor(Math.random() * Math.floor(options.backgroundType.length))]" :color="avatarOptions ? avatarOptions.backgroundColor : options.backgroundColor[Math.floor(Math.random() * Math.floor(options.backgroundColor.length))]" />
 
-      <Body :color="avatarOptions.skinColor" />
+      <Body :color="avatarOptions ? avatarOptions.skinColor : options.skinColor[Math.floor(Math.random() * Math.floor(options.skinColor.length))]" />
 
-      <Clothes :type="avatarOptions.clothesType" :color="avatarOptions.clothesColor" :graphic="avatarOptions.clothesGraphicsType"/>
+      <Clothes :type="avatarOptions ? avatarOptions.clothesType : options.clothesType[Math.floor(Math.random() * Math.floor(options.clothesType.length))]" :color="avatarOptions ? avatarOptions.clothesColor : options.clothesColor[Math.floor(Math.random() * Math.floor(options.clothesColor.length))]" :graphic="avatarOptions ? avatarOptions.clothesGraphicsType : options.clothesGraphicsType[Math.floor(Math.random() * Math.floor(options.clothesGraphicsType.length))]"/>
       
-      <Face :eyebrowType="avatarOptions.eyebrowType" :eyesType="avatarOptions.eyesType" :mouthType="avatarOptions.mouthType" :facialHairType="avatarOptions.facialHairType" :facialFairColor="avatarOptions.facialHairColor" />
+      <Face :eyebrowType="avatarOptions ? avatarOptions.eyebrowType : options.eyebrowType[Math.floor(Math.random() * Math.floor(options.eyebrowType.length))]" :eyesType="avatarOptions ? avatarOptions.eyesType : options.eyesType[Math.floor(Math.random() * Math.floor(options.eyesType.length))]" :mouthType="avatarOptions ? avatarOptions.mouthType : options.mouthType[Math.floor(Math.random() * Math.floor(options.mouthType.length))]" :facialHairType="avatarOptions ? avatarOptions.facialHairType : options.facialHairType[Math.floor(Math.random() * Math.floor(options.facialHairType.length))]" :facialFairColor="avatarOptions ? avatarOptions.facialHairColor : options.facialHairColor[Math.floor(Math.random() * Math.floor(options.facialHairColor.length))]" />
 
-      <Accessories :type="avatarOptions.accessoriesType" />
+      <Accessories :type="avatarOptions ? avatarOptions.accessoriesType : options.accessoriesType[Math.floor(Math.random() * Math.floor(options.accessoriesType.length))]" />
 
-      <Top :type="avatarOptions.topType" :color="avatarOptions.topColor" />
+      <Top :type="avatarOptions ? avatarOptions.topType : options.topType[Math.floor(Math.random() * Math.floor(options.topType.length))]" :color="avatarOptions ? avatarOptions.topColor : options.topColor[Math.floor(Math.random() * Math.floor(options.topColor.length))]" />
 
     </svg>
 </template>
@@ -78,35 +78,36 @@ export default {
       default: 280,
       required: false,
     },
-    avatarOptions: {
-      // Background
-      backgroundType: {type: String, enum: optionsJSON.backgroundType, default: 'circle', required: false},
-      backgroundColor: {type: String, enum: optionsJSON.backgroundColor, default: 'blue01', required: false},
+    avatarOptions: {type: Object, required: false}
+    // avatarOptions: {
+    //   // Background
+    //   backgroundType: {type: String, enum: optionsJSON.backgroundType, default: 'circle', required: false},
+    //   backgroundColor: {type: String, enum: optionsJSON.backgroundColor, default: 'blue01', required: false},
 
-      // Body
-      skinColor: {type: String, enum: optionsJSON.skinColor, default: 'light', required: false},
+    //   // Body
+    //   skinColor: {type: String, enum: optionsJSON.skinColor, default: 'light', required: false},
 
-      // Clothes
-      clothesType: {type: String, enum: optionsJSON.clothesType, default: 'hoodie', required: false},
-      clothesColor: {type: String, enum: optionsJSON.clothesColor, default: 'pink', required: false},
-      clothesGraphicsType: {type: String, enum: optionsJSON.clothesGraphicsType, default: 'pizza', required: false},
+    //   // Clothes
+    //   clothesType: {type: String, enum: optionsJSON.clothesType, default: 'hoodie', required: false},
+    //   clothesColor: {type: String, enum: optionsJSON.clothesColor, default: 'pink', required: false},
+    //   clothesGraphicsType: {type: String, enum: optionsJSON.clothesGraphicsType, default: 'pizza', required: false},
 
-      // Face
-      eyebrowType: {type: String, enum: optionsJSON.eyebrowType, default: 'raisedExcited', required: false},
-      eyesType: {type: String, enum: optionsJSON.eyesType, default: 'squint', required: false},
-      mouthType: {type: String, enum: optionsJSON.mouthType, default: 'smile', required: false},
+    //   // Face
+    //   eyebrowType: {type: String, enum: optionsJSON.eyebrowType, default: 'raisedExcited', required: false},
+    //   eyesType: {type: String, enum: optionsJSON.eyesType, default: 'squint', required: false},
+    //   mouthType: {type: String, enum: optionsJSON.mouthType, default: 'smile', required: false},
 
-      // Facial hair
-      facialHairType: {type: String, enum: optionsJSON.facialHairType, default: 'beardLight', required: false},
-      facialHairColor: {type: String, enum: optionsJSON.facialHairColor, default: 'brownDark', required: false},
+    //   // Facial hair
+    //   facialHairType: {type: String, enum: optionsJSON.facialHairType, default: 'beardLight', required: false},
+    //   facialHairColor: {type: String, enum: optionsJSON.facialHairColor, default: 'brownDark', required: false},
 
-      // Hair or Hat
-      topType: {type: String, enum: optionsJSON.topType, default: 'none', required: false},
-      topColor: {type: String, enum: optionsJSON.topColor, default: 'brownDark'},
+    //   // Hair or Hat
+    //   topType: {type: String, enum: optionsJSON.topType, default: 'none', required: false},
+    //   topColor: {type: String, enum: optionsJSON.topColor, default: 'brownDark'},
       
-      // Accessories
-      accessoriesType: {type: String, enum: optionsJSON.accessoriesType, default: 'round', required: false},
-    },
+    //   // Accessories
+    //   accessoriesType: {type: String, enum: optionsJSON.accessoriesType, default: 'round', required: false},
+    // },
   },
   // computed: {
   //   // ...mapState({
@@ -115,12 +116,14 @@ export default {
   // },
   data() {
     return {
-
+      options: optionsJSON,
     }
   },
-  // methods: {
-
-  // },
+  methods: {
+    forceUpdate() {
+      this.$forceUpdate()
+    }
+  },
   // created() {
 
   // },

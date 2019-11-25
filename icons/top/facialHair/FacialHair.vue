@@ -82,7 +82,7 @@ export default {
   data() {
     return {
         types: {
-            blank: null,
+            none: null,
             beardMedium: null,
             beardLight: BeardLightJSON,
             beardMajestic: null,

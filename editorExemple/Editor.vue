@@ -14,6 +14,7 @@
       </b-col>
 
       <b-col sm="12" md="4" class="text-center">
+        <!-- <Avataaars /> -->
         <Avataaars :avatarOptions="{
           backgroundType: selectedBackgroundType,
           backgroundColor: selectedBackgroundColor,

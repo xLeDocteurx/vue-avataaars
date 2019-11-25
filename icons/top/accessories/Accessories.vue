@@ -58,8 +58,12 @@
 
 
 <script>
-import blankJSON from './Blank.json'
-import roundJSON from './Round.json'
+import BlankJSON from './Blank.json'
+import KurtJSON from './Kurt.json'
+import Prescription01JSON from './Prescription01.json'
+import Prescription02JSON from './Prescription02.json'
+import RoundJSON from './Round.json'
+import SunglassesJSON from './Sunglasses.json'
 
 export default {
   name: 'Accessories',
@@ -78,12 +82,12 @@ export default {
   data() {
     return {
         types: {
-            none: blankJSON,
-            kurt: null,
-            prescription01: null,
-            prescription02: null,
-            round: roundJSON,
-            sunglasses: null,
+            none: BlankJSON,
+            kurt: KurtJSON,
+            prescription01: Prescription01JSON,
+            prescription02: Prescription02JSON,
+            round: RoundJSON,
+            sunglasses: SunglassesJSON,
             wayfarers: null,
         }
     }
