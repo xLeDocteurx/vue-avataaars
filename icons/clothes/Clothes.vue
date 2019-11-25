@@ -5,7 +5,7 @@
         </mask>
         <g v-for="(geo, geoIndex) in selectedClothes.geometries" :id="geo.id" :key="geo.id + '-clothes-geometry-' + geoIndex">
             <path v-if="geo.type == 'path'"
-            :transform="'translate(' + geo.offset.x + ', ' + geo.offset.y + ')' + (geo.scale ? ' scale(' + geo.scale.x + ', ' + geo.scale.y + ')' : '')"
+            :transform="'translate(' + geo.offset.x + ', ' + geo.offset.y + ')' + (geo.scale ? ' scale(' + geo.scale.x + ', ' + geo.scale.y + ')' : '') + (geo.rotate ? 'rotate(' + geo.rotate  + ')' : '')"
             :fill-opacity="geo.fillOpacity ? geo.fillOpacity : null"
             :fill="geo.fill ? geo.fill : colors[color]"
             :fill-rule="geo.fillRule ? geo.fillRule : null"
@@ -14,7 +14,7 @@
             :d="geo.d"
             ></path>
             <circle v-else-if="geo.type == 'circle'"
-            :transform="'translate(' + geo.offset.x + ', ' + geo.offset.y + ')' + (geo.scale ? ' scale(' + geo.scale.x + ', ' + geo.scale.y + ')' : '')"
+            :transform="'translate(' + geo.offset.x + ', ' + geo.offset.y + ')' + (geo.scale ? ' scale(' + geo.scale.x + ', ' + geo.scale.y + ')' : '') + (geo.rotate ? 'rotate(' + geo.rotate  + ')' : '')"
             :fill-opacity="geo.fillOpacity ? geo.fillOpacity : null"
             :fill="geo.fill ? geo.fill : colors[color]"
             :fill-rule="geo.fillRule ? geo.fillRule : null"
@@ -25,7 +25,7 @@
             :r="geo.r"
             ></circle>
             <ellipse v-else-if="geo.type == 'ellipse'"
-            :transform="'translate(' + geo.offset.x + ', ' + geo.offset.y + ')' + (geo.scale ? ' scale(' + geo.scale.x + ', ' + geo.scale.y + ')' : '')"
+            :transform="'translate(' + geo.offset.x + ', ' + geo.offset.y + ')' + (geo.scale ? ' scale(' + geo.scale.x + ', ' + geo.scale.y + ')' : '') + (geo.rotate ? 'rotate(' + geo.rotate  + ')' : '')"
             :fill-opacity="geo.fillOpacity ? geo.fillOpacity : null"
             :fill="geo.fill ? geo.fill : null"
             :fill-rule="geo.fillRule ? geo.fillRule : null"
@@ -37,7 +37,7 @@
             :ry="geo.ry"
             ></ellipse>
             <rect v-else-if="geo.type == 'rect'"
-            :transform="'translate(' + geo.offset.x + ', ' + geo.offset.y + ')' + (geo.scale ? ' scale(' + geo.scale.x + ', ' + geo.scale.y + ')' : '')"
+            :transform="'translate(' + geo.offset.x + ', ' + geo.offset.y + ')' + (geo.scale ? ' scale(' + geo.scale.x + ', ' + geo.scale.y + ')' : '') + (geo.rotate ? 'rotate(' + geo.rotate  + ')' : '')"
             :fill-opacity="geo.fillOpacity ? geo.fillOpacity : null"
             :fill="geo.fill ? geo.fill : colors[color]"
             :fill-rule="geo.fillRule ? geo.fillRule : null"

@@ -67,7 +67,7 @@
                 :options="options.eyesType" 
                 ></b-form-select>
               </b-form-group>
-              <b-form-group label="↳ !!! Eyebrow Type">
+              <b-form-group label="↳ Eyebrow Type">
                 <b-form-select 
                 size="sm" 
                 v-model="selectedEyebrowType" 

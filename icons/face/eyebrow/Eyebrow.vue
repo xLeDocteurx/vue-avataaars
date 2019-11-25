@@ -6,7 +6,7 @@
         <g v-for="(geo, geoIndex) in selectedEyebrow.geometries" :id="geo.id" :key="geo.id + '-eyebrow-geometry-' + geoIndex">
 
             <path v-if="geo.type == 'path'"
-            :transform="'translate(' + geo.offset.x + ', ' + geo.offset.y + ')' + (geo.scale ? ' scale(' + geo.scale.x + ', ' + geo.scale.y + ')' : '')"
+            :transform="'translate(' + geo.offset.x + ', ' + geo.offset.y + ')' + (geo.scale ? ' scale(' + geo.scale.x + ', ' + geo.scale.y + ')' : '') + (geo.rotate ? 'rotate(' + geo.rotate  + ')' : '')"
             :fill-opacity="geo.fillOpacity ? geo.fillOpacity : null"
             :fill="geo.fill ? geo.fill : null"
             :fill-rule="geo.fillRule ? geo.fillRule : null"
@@ -15,7 +15,7 @@
             :d="geo.d"
             ></path>
             <circle v-else-if="geo.type == 'circle'"
-            :transform="'translate(' + geo.offset.x + ', ' + geo.offset.y + ')' + (geo.scale ? ' scale(' + geo.scale.x + ', ' + geo.scale.y + ')' : '')"
+            :transform="'translate(' + geo.offset.x + ', ' + geo.offset.y + ')' + (geo.scale ? ' scale(' + geo.scale.x + ', ' + geo.scale.y + ')' : '') + (geo.rotate ? 'rotate(' + geo.rotate  + ')' : '')"
             :fill-opacity="geo.fillOpacity ? geo.fillOpacity : null"
             :fill="geo.fill ? geo.fill : null"
             :fill-rule="geo.fillRule ? geo.fillRule : null"
@@ -26,7 +26,7 @@
             :r="geo.r"
             ></circle>
             <ellipse v-else-if="geo.type == 'ellipse'"
-            :transform="'translate(' + geo.offset.x + ', ' + geo.offset.y + ')' + (geo.scale ? ' scale(' + geo.scale.x + ', ' + geo.scale.y + ')' : '')"
+            :transform="'translate(' + geo.offset.x + ', ' + geo.offset.y + ')' + (geo.scale ? ' scale(' + geo.scale.x + ', ' + geo.scale.y + ')' : '') + (geo.rotate ? 'rotate(' + geo.rotate  + ')' : '')"
             :fill-opacity="geo.fillOpacity ? geo.fillOpacity : null"
             :fill="geo.fill ? geo.fill : null"
             :fill-rule="geo.fillRule ? geo.fillRule : null"
@@ -38,7 +38,7 @@
             :ry="geo.ry"
             ></ellipse>
             <rect v-else-if="geo.type == 'rect'"
-            :transform="'translate(' + geo.offset.x + ', ' + geo.offset.y + ')' + (geo.scale ? ' scale(' + geo.scale.x + ', ' + geo.scale.y + ')' : '')"
+            :transform="'translate(' + geo.offset.x + ', ' + geo.offset.y + ')' + (geo.scale ? ' scale(' + geo.scale.x + ', ' + geo.scale.y + ')' : '') + (geo.rotate ? 'rotate(' + geo.rotate  + ')' : '')"
             :fill-opacity="geo.fillOpacity ? geo.fillOpacity : null"
             :fill="geo.fill ? geo.fill : null"
             :fill-rule="geo.fillRule ? geo.fillRule : null"
@@ -58,7 +58,19 @@
 
 
 <script>
+import AngryJSON from './Angry.json'
+import AngryNaturalJSON from './AngryNatural.json'
+import DefaultJSON from './Default.json'
+import DefaultNaturalJSON from './DefaultNatural.json'
+import FlatNaturalJSON from './FlatNatural.json'
+import FrownNaturalJSON from './FrownNatural.json'
 import RaisedExcitedJSON from './RaisedExcited.json'
+import RaisedExcitedNaturalJSON from './RaisedExcitedNatural.json'
+import SadConcernedJSON from './SadConcerned.json'
+import SadConcernedNaturalJSON from './SadConcernedNatural.json'
+import UnibrowNaturalJSON from './UnibrowNatural.json'
+import UpDownJSON from './UpDown.json'
+import UpDownNaturalJSON from './UpDownNatural.json'
 
 export default {
   name: 'Eyebrow',
@@ -77,18 +89,19 @@ export default {
   data() {
     return {
         types: {
-            angry: null,
-            angryNatural: null,
-            default: null,
-            defaultNatural: null,
-            flatNatural: null,
+            angry: AngryJSON,
+            angryNatural: AngryNaturalJSON,
+            default: DefaultJSON,
+            defaultNatural: DefaultNaturalJSON,
+            flatNatural: FlatNaturalJSON,
+            frownNatural: FrownNaturalJSON,
             raisedExcited: RaisedExcitedJSON,
-            raisedExcitedNatural: null,
-            sadConcerned: null,
-            sadConcernedNatural: null,
-            unibrowNatural: null,
-            updown: null,
-            updownNatural: null,
+            raisedExcitedNatural: RaisedExcitedNaturalJSON,
+            sadConcerned: SadConcernedJSON,
+            sadConcernedNatural: SadConcernedNaturalJSON,
+            unibrowNatural: UnibrowNaturalJSON,
+            updown: UpDownJSON,
+            updownNatural: UpDownNaturalJSON,
         },
     }
   },

@@ -1,7 +1,7 @@
 <template>
     <g id="face" transform="translate(76.000000, 82.000000)">
-      <Eyebrow :type="eyebrowType" />
       <Eyes :type="eyesType" />
+      <Eyebrow :type="eyebrowType" />
       <Nose />
       <Mouth :type="mouthType" />
       <FacialHair :type="facialHairType" :color="facialHairColor" />
