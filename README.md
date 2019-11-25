@@ -20,6 +20,7 @@ This is a port from  Sketch library [Avataaars](https://avataaars.com/) designed
 
 #### Roadmap to 0.0.1 and NPM
 - Basic Avataaars component with all the svg assets.
+- Random avatar generation if no options is passed to the Avataaars component.
 
 #### Roadmap to 0.1.0
 - Feed the Avataaars component with a hash to procedurally generate an avatar.
