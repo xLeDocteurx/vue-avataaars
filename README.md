@@ -53,6 +53,7 @@ Import the Avataaars component. Pass it an object called "avatarOptions" with so
     clothesColor: selectedClothesColor,
     clothesGraphicsType: selectedClothesGraphicType,
     eyesType: selectedEyesType,
+    eyebrowType: selectedEyebrowType,
     mouthType: selectedMouthType,
     facialHairType: selectedFacialHairType,
     facialHairColor: selectedFacialHairColor,
