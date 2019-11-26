@@ -9,3 +9,5 @@ cd ../
 git add .
 
 git commit -m "deploying new github page via shell script"
+
+git push origin master
