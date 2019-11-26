@@ -26,11 +26,11 @@ export default {
       return {
         types: {
           none: graphicsJSON.none,
-          bat: null,
-          cumbia: null,
-          deer: null,
-          diamond: null,
-          hola: null,
+          bat: graphicsJSON.bat,
+          cumbia: graphicsJSON.cumbia,
+          deer: graphicsJSON.deer,
+          diamond: graphicsJSON.diamond,
+          hola: graphicsJSON.hola,
           pizza: graphicsJSON.pizza,
           resist: null,
           selena: null,

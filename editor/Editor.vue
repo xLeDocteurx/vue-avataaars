@@ -98,7 +98,7 @@
               </b-form-group>
             </b-tab>
             <b-tab title="Accessories">
-              <b-form-group label="!!! Accessories">
+              <b-form-group label="Accessories">
                 <b-form-select 
                 size="sm" 
                 v-model="selectedAccessoriesType" 
