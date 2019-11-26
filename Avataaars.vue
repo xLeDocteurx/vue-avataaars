@@ -78,42 +78,10 @@ export default {
       default: 280,
       required: false,
     },
-    avatarOptions: {type: Object, required: false}
-    // avatarOptions: {
-    //   // Background
-    //   backgroundType: {type: String, enum: optionsJSON.backgroundType, default: 'circle', required: false},
-    //   backgroundColor: {type: String, enum: optionsJSON.backgroundColor, default: 'blue01', required: false},
-
-    //   // Body
-    //   skinColor: {type: String, enum: optionsJSON.skinColor, default: 'light', required: false},
-
-    //   // Clothes
-    //   clothesType: {type: String, enum: optionsJSON.clothesType, default: 'hoodie', required: false},
-    //   clothesColor: {type: String, enum: optionsJSON.clothesColor, default: 'pink', required: false},
-    //   clothesGraphicsType: {type: String, enum: optionsJSON.clothesGraphicsType, default: 'pizza', required: false},
-
-    //   // Face
-    //   eyebrowType: {type: String, enum: optionsJSON.eyebrowType, default: 'raisedExcited', required: false},
-    //   eyesType: {type: String, enum: optionsJSON.eyesType, default: 'squint', required: false},
-    //   mouthType: {type: String, enum: optionsJSON.mouthType, default: 'smile', required: false},
-
-    //   // Facial hair
-    //   facialHairType: {type: String, enum: optionsJSON.facialHairType, default: 'beardLight', required: false},
-    //   facialHairColor: {type: String, enum: optionsJSON.facialHairColor, default: 'brownDark', required: false},
-
-    //   // Hair or Hat
-    //   topType: {type: String, enum: optionsJSON.topType, default: 'none', required: false},
-    //   topColor: {type: String, enum: optionsJSON.topColor, default: 'brownDark'},
-      
-    //   // Accessories
-    //   accessoriesType: {type: String, enum: optionsJSON.accessoriesType, default: 'round', required: false},
-    // },
+    avatarOptions: {
+      type: Object, required: false
+    },
   },
-  // computed: {
-  //   // ...mapState({
-  //   //     sesssion: state => state.sesssion
-  //   // }),
-  // },
   data() {
     return {
       options: optionsJSON,
@@ -124,21 +92,6 @@ export default {
       this.$forceUpdate()
     }
   },
-  // created() {
-
-  // },
-  // mounted() {
-
-  // },
-  // beforeUpdate() {
-
-  // },
-  // updated() {
-
-  // },
-  // beforeDestroy() {
-
-  // },
 }
 </script>
 

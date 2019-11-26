@@ -58,6 +58,7 @@
 
 
 <script>
+import NoneJSON from './None.json'
 import BeardLightJSON from './BeardLight.json'
 
 export default {
@@ -82,7 +83,7 @@ export default {
   data() {
     return {
         types: {
-            none: null,
+            none: NoneJSON,
             beardMedium: null,
             beardLight: BeardLightJSON,
             beardMajestic: null,
