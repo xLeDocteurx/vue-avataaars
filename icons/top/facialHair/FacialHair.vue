@@ -59,7 +59,11 @@
 
 <script>
 import NoneJSON from './None.json'
+import BeardMediumJSON from './BeardMedium.json'
 import BeardLightJSON from './BeardLight.json'
+import BeardMajesticJSON from './BeardMajestic.json'
+import MoustacheFancyJSON from './MoustacheFancy.json'
+import MoustacheMagnumJSON from './MoustacheMagnum.json'
 
 export default {
   name: 'FacialHair',
@@ -84,11 +88,11 @@ export default {
     return {
         types: {
             none: NoneJSON,
-            beardMedium: null,
+            beardMedium: BeardMediumJSON,
             beardLight: BeardLightJSON,
-            beardMajestic: null,
-            moustacheFancy: null,
-            moustacheMagnum: null,
+            beardMajestic: BeardMajesticJSON,
+            moustacheFancy: MoustacheFancyJSON,
+            moustacheMagnum: MoustacheMagnumJSON,
         },
         colors: {
             auburn: "#A55728",

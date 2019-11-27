@@ -82,14 +82,14 @@
                 :options="options.mouthType" 
                 ></b-form-select>
               </b-form-group>
-              <b-form-group label="!!! Facial Hair Type">
+              <b-form-group label="Facial Hair Type">
                 <b-form-select 
                 size="sm" 
                 v-model="selectedFacialHairType" 
                 :options="options.facialHairType" 
                 ></b-form-select>
               </b-form-group>
-              <b-form-group label="↳ !!! Facial Hair Color">
+              <b-form-group label="↳ Facial Hair Color">
                 <b-form-select 
                 size="sm" 
                 v-model="selectedFacialHairColor" 
