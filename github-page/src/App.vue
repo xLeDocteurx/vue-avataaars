@@ -1,11 +1,11 @@
 <template>
-  <div id="app">
+  <div id="app" class="container">
     <Editor />
 
     <footer class="footer">
       <p class="float-right">
         <i class="fa fa-github"></i>
-        <a href="https://github.com/fangpenlin/avataaars-geneator" target="_blank">GitHub repo</a>
+        <a href="https://github.com/xLeDocteurx/vue-avataaars" target="_blank">GitHub repo</a>
       </p>
       <p>
         Designed by
