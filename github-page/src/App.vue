@@ -2,6 +2,8 @@
   <div id="app" class="container">
     <Editor />
 
+    <hr>
+
     <footer class="footer">
       <p class="float-right">
         <i class="fa fa-github"></i>
