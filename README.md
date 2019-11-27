@@ -79,7 +79,39 @@ export default {
 
 ```
 
-## Props for avatarOptions
+## Props for the Avataaars component
+```vue
+    iconName: {
+      type: String,
+      default: 'avatar',
+      required: false,
+    },
+    width: {
+      type: Number,
+      default: 264,
+      required: false,
+    },
+    height: {
+      type: Number,
+      default: 280,
+      required: false,
+    },
+    maxWidth: {
+      type: Number,
+      default: 264,
+      required: false,
+    },
+    maxHeight: {
+      type: Number,
+      default: 280,
+      required: false,
+    },
+    avatarOptions: {
+      type: Object, required: false
+    },
+```
+
+## Props of avatarOptions
 ```
 {
     "backgroundType": ["circle", "transparent"],
