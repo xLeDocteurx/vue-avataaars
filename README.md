@@ -37,7 +37,7 @@ Import the Avataaars component. Pass it an object called "avatarOptions" with so
 
 ## Installation
 ```
-
+npm install vue-avataaars --save ( the name for the npm repository is not reserved yet )
 ```
 
 ## Usage
