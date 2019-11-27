@@ -1,0 +1,22 @@
+{
+    "masks": [
+
+    ],
+    "geometries": [
+        {
+            "offset": {"x": 0.000000, "y": 0.000000},
+            "id": "mouth",
+            "type": "rect",
+
+            "fillOpacity": "0.699999988",
+            "fill": "#000000",
+            "fillRule": "evenodd",
+
+            "x": 42,
+            "y": 18,
+            "width": 24,
+            "height": 6,
+            "rx": 3
+        }
+    ]
+}
