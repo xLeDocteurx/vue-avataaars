@@ -60,13 +60,19 @@
 <script>
 import noneJSON from './None.json'
 
-import eyePatchJSON from './EyePatch.json'
 import hatJSON from './Hat.json'
 
 import hijabJSON from './Hijab.json'
 import turbanJSON from './Turban.json'
 
-import longHairBigHairJSON from './LongHairBigHair.json'
+import LongHairBigHairJSON from './LongHairBigHair.json'
+import LongHairBobJSON from './LongHairBob.json'
+import LongHairBunJSON from './LongHairBun.json'
+import LongHairCurlyJSON from './LongHairCurly.json'
+import LongHairCurvyJSON from './LongHairCurvy.json'
+import LongHairDreadsJSON from './LongHairDreads.json'
+
+import LongHairFroJSON from './LongHairFro.json'
 
 export default {
   name: 'Top',
@@ -101,7 +107,6 @@ export default {
         },
         types: {
             none: noneJSON,
-            eyepatch: eyePatchJSON,
             hat: hatJSON,
             hijab: hijabJSON,
             turban: turbanJSON,
@@ -109,14 +114,14 @@ export default {
             winterHat2: null,
             winterHat3: null,
             winterHat4: null,
-            longHairBigHair: longHairBigHairJSON,
-            longHairBob: null,
-            longHairBun: null,
-            longHairCurly: null,
-            longHairCurvy: null,
-            longHairDreads: null,
+            longHairBigHair: LongHairBigHairJSON,
+            longHairBob: LongHairBobJSON,
+            longHairBun: LongHairBunJSON,
+            longHairCurly: LongHairCurlyJSON,
+            longHairCurvy: LongHairCurvyJSON,
+            longHairDreads: LongHairDreadsJSON,
             longHairFrida: null,
-            longHairFro: null,
+            longHairFro: LongHairFroJSON,
             longHairFroBand: null,
             longHairNotTooLong: null,
             longHairShavedSides: null,

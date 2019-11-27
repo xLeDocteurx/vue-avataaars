@@ -59,6 +59,7 @@
 
 <script>
 import BlankJSON from './Blank.json'
+import eyePatchJSON from './EyePatch.json'
 import KurtJSON from './Kurt.json'
 import Prescription01JSON from './Prescription01.json'
 import Prescription02JSON from './Prescription02.json'
@@ -83,6 +84,7 @@ export default {
     return {
         types: {
             none: BlankJSON,
+            eyepatch: eyePatchJSON,
             kurt: KurtJSON,
             prescription01: Prescription01JSON,
             prescription02: Prescription02JSON,
