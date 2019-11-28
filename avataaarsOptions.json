@@ -17,5 +17,8 @@
 
     "accessoriesType": ["none", "eyepatch", "kurt", "prescription01", "prescription02", "round"],
     "topType": ["none", "hat", "hijab", "turban", "winterHat1", "winterHat2", "winterHat3", "winterHat4", "longHairBigHair", "longHairBob", "longHairBun", "longHairCurly", "longHairCurvy", "longHairDreads", "longHairFrida", "longHairFro", "longHairFroBand", "longHairNotTooLong", "longHairShavedSides", "longHairMiaWallace", "longHairStraight", "longHairStraight2", "longHairStraightStrand", "shortHairDreads01", "shortHairDreads02", "shortHairFrizzle", "shortHairShaggyMullet", "shortHairShortCurly", "shortHairShortFlat", "shortHairShortRound", "shortHairShortWaved", "shortHairSides", "shortHairTheCaesar", "shortHairTheCaesarSidePart"],
-    "topColor": ["auburn", "black", "blonde", "blondeGolden", "brown", "brownDark", "platinum", "red"]
+    "topColor": [
+        "auburn", "black", "blonde", "blondeGolden", "brown", "brownDark", "platinum", "red",
+        "blue01", "blue02", "blue03", "gray01", "gray02", "heather", "pastelBlue", "pastelGreen", "pastelOrange", "pastelRed", "pastelYellow", "pink", "red", "white"
+    ]
 }

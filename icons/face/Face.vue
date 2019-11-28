@@ -5,6 +5,7 @@
       <Nose />
       <Mouth :type="mouthType" />
       <FacialHair :type="facialHairType" :color="facialHairColor" />
+      <Top :type="topType" :color="topColor" />
     </g>
 </template>
 
@@ -15,6 +16,7 @@ import Eyes from './eyes/Eyes'
 import Nose from './nose/Nose'
 import Mouth from './mouth/Mouth'
 import FacialHair from '../top/facialHair/FacialHair'
+import Top from '../top/Top'
 
 export default {
   name: 'Face',
@@ -24,6 +26,7 @@ export default {
     Nose,
     Mouth,
     FacialHair,
+    Top,
   },
   props: {
     eyebrowType: {
@@ -47,6 +50,16 @@ export default {
       required: false,
     },
     facialHairColor: {
+      type: String,
+      default: 'brownDark',
+      required: false,
+    },
+    topType: {
+      type: String,
+      default: 'beardLight',
+      required: false,
+    },
+    topColor: {
       type: String,
       default: 'brownDark',
       required: false,

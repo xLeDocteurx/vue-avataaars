@@ -1,5 +1,5 @@
 <template>
-    <g id="top" transform="translate(0.000000, 0.000000)">
+    <g id="top" transform="translate(-76.000000, -82.000000)">
         <mask v-for="(mask, mIndex) in selectedTop.masks" :id="mask.id" :key="mask.id + 'top-mask-' + mIndex">
             <path :d="mask.d" :transform="'translate(' + mask.offset.x + ', ' + mask.offset.y + ')'" :fill="mask.fill"></path>
         </mask>
@@ -75,7 +75,8 @@ import hijabJSON from './Hijab.json'
 import TurbanJSON from './Turban.json'
 import WinterHat1JSON from './WinterHat1.json'
 import WinterHat2JSON from './WinterHat2.json'
-
+import WinterHat3JSON from './WinterHat3.json'
+import WinterHat4JSON from './WinterHat4.json'
 import LongHairBigHairJSON from './LongHairBigHair.json'
 import LongHairBobJSON from './LongHairBob.json'
 import LongHairBunJSON from './LongHairBun.json'
@@ -84,6 +85,12 @@ import LongHairCurvyJSON from './LongHairCurvy.json'
 import LongHairDreadsJSON from './LongHairDreads.json'
 
 import LongHairFroJSON from './LongHairFro.json'
+import LongHairFroBandJSON from './LongHairFroBand.json'
+import LongHairNotTooLongJSON from './LongHairNotTooLong.json'
+
+import LongHairMiaWallaceJSON from './LongHairMiaWallace.json'
+
+import LongHairStraightJSON from './LongHairStraight.json'
 
 export default {
   name: 'Top',
@@ -115,6 +122,21 @@ export default {
             brownDark: "#4A312C",
             platinum: "#ECDCBF",
             red: "#C93305",
+
+            blue01: '#65C9FF',
+            blue02: '#5199E4',
+            blue03: '#25557C',
+            gray01: '#E6E6E6',
+            gray02: '#929598',
+            heather: '#3C4F5C',
+            pastelBlue: '#B1E2FF',
+            pastelGreen: '#A7FFC4',
+            pastelOrange: '#FFDEB5',
+            pastelRed: '#FFAFB9',
+            pastelYellow: '#FFFFB1',
+            pink: '#FF488E',
+            red: '#FF5C5C',
+            white: '#FFFFFF',
         },
         types: {
             none: noneJSON,
@@ -123,8 +145,8 @@ export default {
             turban: TurbanJSON,
             winterHat1: WinterHat1JSON,
             winterHat2: WinterHat2JSON,
-            winterHat3: null,
-            winterHat4: null,
+            winterHat3: WinterHat3JSON,
+            winterHat4: WinterHat4JSON,
             longHairBigHair: LongHairBigHairJSON,
             longHairBob: LongHairBobJSON,
             longHairBun: LongHairBunJSON,
@@ -133,11 +155,11 @@ export default {
             longHairDreads: LongHairDreadsJSON,
             longHairFrida: null,
             longHairFro: LongHairFroJSON,
-            longHairFroBand: null,
-            longHairNotTooLong: null,
+            longHairFroBand: LongHairFroBandJSON,
+            longHairNotTooLong: LongHairNotTooLongJSON,
             longHairShavedSides: null,
-            longHairMiaWallace: null,
-            longHairStraight: null,
+            longHairMiaWallace: LongHairMiaWallaceJSON,
+            longHairStraight: LongHairStraightJSON,
             longHairStraight2: null,
             longHairStraightStrand: null,
             shortHairDreads01: null,
