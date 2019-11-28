@@ -50,6 +50,15 @@
             :height="geo.height"
             :rx="geo.rx"
             ></rect>
+            <polygon v-else-if="geo.type == 'polygon'"
+            :transform="'translate(' + geo.offset.x + ', ' + geo.offset.y + ')' + (geo.scale ? ' scale(' + geo.scale.x + ', ' + geo.scale.y + ')' : '') + (geo.rotate ? 'rotate(' + geo.rotate  + ')' : '')"
+            :fill-opacity="geo.fillOpacity ? geo.fillOpacity : null"
+            :fill="geo.fill ? geo.fill : colors[color]"
+            :fill-rule="geo.fillRule ? geo.fillRule : null"
+            :mask="geo.mask ? 'url(#' + geo.mask + ')' : null"
+
+            :points="geo.points"
+            ></polygon>
 
         </g>
 
@@ -63,7 +72,9 @@ import noneJSON from './None.json'
 import hatJSON from './Hat.json'
 
 import hijabJSON from './Hijab.json'
-import turbanJSON from './Turban.json'
+import TurbanJSON from './Turban.json'
+import WinterHat1JSON from './WinterHat1.json'
+import WinterHat2JSON from './WinterHat2.json'
 
 import LongHairBigHairJSON from './LongHairBigHair.json'
 import LongHairBobJSON from './LongHairBob.json'
@@ -109,9 +120,9 @@ export default {
             none: noneJSON,
             hat: hatJSON,
             hijab: hijabJSON,
-            turban: turbanJSON,
-            winterHat1: null,
-            winterHat2: null,
+            turban: TurbanJSON,
+            winterHat1: WinterHat1JSON,
+            winterHat2: WinterHat2JSON,
             winterHat3: null,
             winterHat4: null,
             longHairBigHair: LongHairBigHairJSON,

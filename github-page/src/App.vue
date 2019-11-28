@@ -2,7 +2,7 @@
   <div id="app" class="container">
     <Editor />
 
-    <hr>
+    <hr />
 
     <footer class="footer">
       <p class="float-right">

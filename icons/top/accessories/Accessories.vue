@@ -50,6 +50,15 @@
             :height="geo.height"
             :rx="geo.rx"
             ></rect>
+            <polygon v-else-if="geo.type == 'polygon'"
+            :transform="'translate(' + geo.offset.x + ', ' + geo.offset.y + ')' + (geo.scale ? ' scale(' + geo.scale.x + ', ' + geo.scale.y + ')' : '') + (geo.rotate ? 'rotate(' + geo.rotate  + ')' : '')"
+            :fill-opacity="geo.fillOpacity ? geo.fillOpacity : null"
+            :fill="geo.fill ? geo.fill : null"
+            :fill-rule="geo.fillRule ? geo.fillRule : null"
+            :mask="geo.mask ? 'url(#' + geo.mask + ')' : null"
+
+            :points="geo.points"
+            ></polygon>
 
         </g>
 
