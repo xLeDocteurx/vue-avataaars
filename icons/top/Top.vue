@@ -99,6 +99,7 @@ import ShortHairShortWavedJSON from './ShortHairShortWaved.json'
 import ShortHairSidesJSON from './ShortHairSides.json'
 import ShortHairTheCeasarJSON from './ShortHairTheCeasar.json'
 import ShortHairTheCeasarSidePartJSON from './ShortHairTheCeasarSidePart.json'
+import ShortHairShortCurlyJSON from './ShortHairShortCurly.json'
 
 export default {
   name: 'Top',
@@ -174,7 +175,7 @@ export default {
             shortHairDreads02: null,
             shortHairFrizzle: null,
             shortHairShaggyMullet: null,
-            shortHairShortCurly: null,
+            shortHairShortCurly: ShortHairShortCurlyJSON,
             shortHairShortFlat: ShortHairShortFlatJSON,
             shortHairShortRound: ShortHairShortRoundJSON,
             shortHairShortWaved: ShortHairShortWavedJSON,
