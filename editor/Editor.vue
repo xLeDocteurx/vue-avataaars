@@ -8,7 +8,7 @@
           Vue Avataaars
         </h1>
 
-        <div class="form-group row">
+        <!-- <div class="form-group row">
           <div class="col-sm-2">
           </div>
           <div class="col-sm-8">
@@ -21,8 +21,7 @@
             </button>
             {{ inputValue }}
           </div>
-        
-        </div>
+        </div> -->
 
       </b-col>
 
