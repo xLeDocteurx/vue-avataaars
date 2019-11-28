@@ -87,10 +87,18 @@ import LongHairDreadsJSON from './LongHairDreads.json'
 import LongHairFroJSON from './LongHairFro.json'
 import LongHairFroBandJSON from './LongHairFroBand.json'
 import LongHairNotTooLongJSON from './LongHairNotTooLong.json'
-
+import LongHairShavedSidesJSON from './LongHairShavedSides.json'
 import LongHairMiaWallaceJSON from './LongHairMiaWallace.json'
-
 import LongHairStraightJSON from './LongHairStraight.json'
+import LongHairStraight2JSON from './LongHairStraight2.json'
+import LongHairStraightStrandJSON from './LongHairStraightStrand.json'
+
+import ShortHairShortFlatJSON from './ShortHairShortFlat.json'
+import ShortHairShortRoundJSON from './ShortHairShortRound.json'
+import ShortHairShortWavedJSON from './ShortHairShortWaved.json'
+import ShortHairSidesJSON from './ShortHairSides.json'
+import ShortHairTheCeasarJSON from './ShortHairTheCeasar.json'
+import ShortHairTheCeasarSidePartJSON from './ShortHairTheCeasarSidePart.json'
 
 export default {
   name: 'Top',
@@ -157,22 +165,22 @@ export default {
             longHairFro: LongHairFroJSON,
             longHairFroBand: LongHairFroBandJSON,
             longHairNotTooLong: LongHairNotTooLongJSON,
-            longHairShavedSides: null,
+            longHairShavedSides: LongHairShavedSidesJSON,
             longHairMiaWallace: LongHairMiaWallaceJSON,
             longHairStraight: LongHairStraightJSON,
-            longHairStraight2: null,
-            longHairStraightStrand: null,
+            longHairStraight2: LongHairStraight2JSON,
+            longHairStraightStrand: LongHairStraightStrandJSON,
             shortHairDreads01: null,
             shortHairDreads02: null,
             shortHairFrizzle: null,
             shortHairShaggyMullet: null,
             shortHairShortCurly: null,
-            shortHairShortFlat: null,
-            shortHairShortRound: null,
-            shortHairShortWaved: null,
-            shortHairSides: null,
-            shortHairTheCaesar: null,
-            shortHairTheCaesarSidePart: null
+            shortHairShortFlat: ShortHairShortFlatJSON,
+            shortHairShortRound: ShortHairShortRoundJSON,
+            shortHairShortWaved: ShortHairShortWavedJSON,
+            shortHairSides: ShortHairSidesJSON,
+            shortHairTheCaesar: ShortHairTheCeasarJSON,
+            shortHairTheCaesarSidePart: ShortHairTheCeasarSidePartJSON
         },
 
     }
