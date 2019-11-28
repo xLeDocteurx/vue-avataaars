@@ -6,11 +6,24 @@
       <b-col sm=12>
         <h1 class="text-center mt-4">
           Vue Avataaars
-          <button type="submit" style="margin-left: 1rem;" class="pull-right btn btn-secondary">
-            <i class="fa fa-random"></i> 
-            Random
-          </button>
         </h1>
+
+        <div class="form-group row">
+          <div class="col-sm-2">
+          </div>
+          <div class="col-sm-8">
+            <input v-model="inputValue" type="text" class="form-control form-control-sm" placeholder="Enter something">
+          </div>
+          <div class="col-sm-2">
+            <button type="submit" style="margin-left: 1rem;" class="pull-right btn btn-secondary btn-sm">
+              <i class="fa fa-random"></i> 
+              Random
+            </button>
+            {{ inputValue }}
+          </div>
+        
+        </div>
+
       </b-col>
 
       <b-col sm="12" md="4" class="text-center">
@@ -174,6 +187,8 @@ export default {
   },
   data() {
     return {
+      inputValue: '',
+
       options: optionsJSON,
 
       selectedBackgroundType: 'circle',
