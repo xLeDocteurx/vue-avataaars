@@ -24,9 +24,13 @@ This is a port from  Sketch library [Avataaars](https://avataaars.com/) designed
 
 #### Roadmap to 0.1.0
 - Feed the Avataaars component with a hash to procedurally generate an avatar.
+( Just like the way the gravatar API works )
 
 #### Roadmap to 0.2.0
 - Fully customizable Avataaars editor.
+
+#### Roadmap to 1.0.0
+- PNG export/generation
 
 #### Roadmap to success
 - Providing an open API like lorempicsum or gravatar.
