@@ -11,7 +11,7 @@ This is a port from  Sketch library [Avataaars](https://avataaars.com/) designed
 
 ## Features
  - SVG based
- - ~~ Light weight ~~
+ - Light weight
  - Scalable
  - Easy to use
  - Easy to integrate with custom editor
