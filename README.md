@@ -10,7 +10,6 @@ This is a port from  Sketch library [Avataaars](https://avataaars.com/) designed
 <p align="center"><img src='avataaars-example.png?raw=true' style='width: 300px; height: 300px;' /></p>
 
 ## Features
-
  - SVG based
  - Light weight 
  - Scalable
@@ -18,22 +17,22 @@ This is a port from  Sketch library [Avataaars](https://avataaars.com/) designed
  - Easy to integrate with custom editor
  - Comes from [Avataaars](https://avataaars.com/)
 
-#### Roadmap to 0.0.1 and NPM
-- Basic Avataaars component with all the svg assets.
-- Random avatar generation if no options is passed to the Avataaars component.
+#### Roadmap to 0.0.2
+- Clothes graphics.
 
 #### Roadmap to 0.1.0
-- Feed the Avataaars component with a hash to procedurally generate an avatar.
+- Feed the Avataaars component with a string or an email hash to procedurally generate an avatar.
 ( Just like the way the gravatar API works )
 
 #### Roadmap to 0.2.0
 - Fully customizable Avataaars editor.
+- Getting rid of Bootstrap Vue in the editor.
 
 #### Roadmap to 1.0.0
 - PNG export/generation
 
 #### Roadmap to success
-- Providing an open API like lorempicsum or gravatar.
+- Providing an open Web API like lorempicsum or gravatar.
 
 #### How it works
 
