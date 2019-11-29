@@ -18,7 +18,7 @@ This is a port from  Sketch library [Avataaars](https://avataaars.com/) designed
  - Easy to integrate with custom editor
  - Comes from [Avataaars](https://avataaars.com/)
 
-#### Roadmap to 0.0.2
+#### Roadmap to 0.0.x
 - Clothes graphics.
 
 #### Roadmap to 0.1.0
