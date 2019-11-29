@@ -83,7 +83,6 @@ import LongHairBunJSON from './LongHairBun.json'
 import LongHairCurlyJSON from './LongHairCurly.json'
 import LongHairCurvyJSON from './LongHairCurvy.json'
 import LongHairDreadsJSON from './LongHairDreads.json'
-
 import LongHairFroJSON from './LongHairFro.json'
 import LongHairFroBandJSON from './LongHairFroBand.json'
 import LongHairNotTooLongJSON from './LongHairNotTooLong.json'
@@ -93,6 +92,10 @@ import LongHairStraightJSON from './LongHairStraight.json'
 import LongHairStraight2JSON from './LongHairStraight2.json'
 import LongHairStraightStrandJSON from './LongHairStraightStrand.json'
 
+import ShortHairDreads01JSON from './ShortHairDreads01.json'
+import ShortHairDreads02JSON from './ShortHairDreads02.json'
+import ShortHairFrizzleJSON from './ShortHairFrizzle.json'
+import ShortHairShaggyMulletJSON from './ShortHairShaggyMullet.json'
 import ShortHairShortFlatJSON from './ShortHairShortFlat.json'
 import ShortHairShortRoundJSON from './ShortHairShortRound.json'
 import ShortHairShortWavedJSON from './ShortHairShortWaved.json'
@@ -162,7 +165,6 @@ export default {
             longHairCurly: LongHairCurlyJSON,
             longHairCurvy: LongHairCurvyJSON,
             longHairDreads: LongHairDreadsJSON,
-            longHairFrida: null,
             longHairFro: LongHairFroJSON,
             longHairFroBand: LongHairFroBandJSON,
             longHairNotTooLong: LongHairNotTooLongJSON,
@@ -171,10 +173,10 @@ export default {
             longHairStraight: LongHairStraightJSON,
             longHairStraight2: LongHairStraight2JSON,
             longHairStraightStrand: LongHairStraightStrandJSON,
-            shortHairDreads01: null,
-            shortHairDreads02: null,
-            shortHairFrizzle: null,
-            shortHairShaggyMullet: null,
+            shortHairDreads01: ShortHairDreads01JSON,
+            shortHairDreads02: ShortHairDreads02JSON,
+            shortHairFrizzle: ShortHairFrizzleJSON,
+            shortHairShaggyMullet: ShortHairShaggyMulletJSON,
             shortHairShortCurly: ShortHairShortCurlyJSON,
             shortHairShortFlat: ShortHairShortFlatJSON,
             shortHairShortRound: ShortHairShortRoundJSON,

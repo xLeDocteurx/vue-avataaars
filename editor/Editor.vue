@@ -120,7 +120,7 @@
               </b-form-group>
             </b-tab>
             <b-tab title="Hair or Top">
-              <b-form-group label="!!! Top Type">
+              <b-form-group label="Top Type">
                 <b-form-select 
                 size="sm" 
                 v-model="selectedTopType" 
@@ -150,13 +150,13 @@
                 :options="options.clothesColor" 
                 ></b-form-select>
               </b-form-group>
-              <b-form-group label="↳ !!! Clothes Graphic">
+              <!-- <b-form-group label="↳ !!! Clothes Graphic">
                 <b-form-select 
                 size="sm" 
                 v-model="selectedClothesGraphicType" 
                 :options="options.clothesGraphicsType" 
                 ></b-form-select>
-              </b-form-group>
+              </b-form-group> -->
             </b-tab>
   
             <!-- <b-tab title="Dummy"> -->

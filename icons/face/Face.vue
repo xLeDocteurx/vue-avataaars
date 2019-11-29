@@ -56,7 +56,7 @@ export default {
     },
     topType: {
       type: String,
-      default: 'beardLight',
+      default: 'none',
       required: false,
     },
     topColor: {

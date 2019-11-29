@@ -32,7 +32,7 @@ export default {
           diamond: graphicsJSON.diamond,
           hola: graphicsJSON.hola,
           pizza: graphicsJSON.pizza,
-          resist: null,
+          resist: graphicsJSON.resist,
           selena: null,
           bear: null,
           skullOutline: null,
