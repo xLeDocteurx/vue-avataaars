@@ -4,7 +4,7 @@
 [![GitHub](https://img.shields.io/github/license/xLeDocteurx/vue-avataaars)](https://github.com/xLeDocteurx/vue-avataaars/pulls)
 
 # Vue js component for Avataaars
-(Alpha)
+Try it here : [https://xledocteurx.github.io/vue-avataaars/](https://xledocteurx.github.io/vue-avataaars/)
 
 This is a port from  Sketch library [Avataaars](https://avataaars.com/) designed by [Pablo Stanley](https://twitter.com/pablostanley). 
 
