@@ -1,6 +1,6 @@
 {
   "name": "vue-avataaars",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A Vue js component for avataaars",
   "main": "index.js",
   "scripts": {
