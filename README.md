@@ -3,15 +3,15 @@
 [![GitHub](https://img.shields.io/github/license/xLeDocteurx/vue-avataaars)](https://github.com/xLeDocteurx/vue-avataaars/pulls)
 
 # Vue js component for Avataaars
-(Work in progress)
+(Alpha)
 
 This is a port from  Sketch library [Avataaars](https://avataaars.com/) designed by [Pablo Stanley](https://twitter.com/pablostanley). 
 
-<p align="center"><img src='avataaars-example.png?raw=true' style='width: 300px; height: 300px;' /></p>
+<p align="center"><img src='avataaars-example.png?raw=true' /></p>
 
 ## Features
  - SVG based
- - Light weight 
+ - ~~ Light weight ~~
  - Scalable
  - Easy to use
  - Easy to integrate with custom editor
@@ -40,46 +40,64 @@ Import the Avataaars component. Pass it an object called "avatarOptions" with so
 
 ## Installation
 ```
-npm install vue-avataaars --save ( the name for the npm repository is not reserved yet )
+npm install vue-avataaars --save
 ```
 
 ## Usage
 
-- Using the Avataaars component only :
+- Using the Avataaars component with an avatarOptions input :
 ```vue
- <template>
-  <Avataaars :avatarOptions="{
-    backgroundType: selectedBackgroundType,
-    backgroundColor: selectedBackgroundColor,
-    skinColor: selectedSkinColor,
-    clothesType: selectedClothesType,
-    clothesColor: selectedClothesColor,
-    clothesGraphicsType: selectedClothesGraphicType,
-    eyesType: selectedEyesType,
-    eyebrowType: selectedEyebrowType,
-    mouthType: selectedMouthType,
-    facialHairType: selectedFacialHairType,
-    facialHairColor: selectedFacialHairColor,
-    accessoriesType: selectedAccessoriesType,
-    topType: selectedTopType,
-    topColor: selectedTopColor,
-  }" />
-</template>
+  <template>
+    <Avataaars 
+    // You can any size as it does not exceed the maxWidth and maxHeight properties
+    :width=200
+    :height=200
+    // Your avatar options
+    :avatarOptions="{
+      backgroundType: selectedBackgroundType,
+      backgroundColor: selectedBackgroundColor,
+      skinColor: selectedSkinColor,
+      clothesType: selectedClothesType,
+      clothesColor: selectedClothesColor,
+      clothesGraphicsType: selectedClothesGraphicType,
+      eyesType: selectedEyesType,
+      eyebrowType: selectedEyebrowType,
+      mouthType: selectedMouthType,
+      facialHairType: selectedFacialHairType,
+      facialHairColor: selectedFacialHairColor,
+      accessoriesType: selectedAccessoriesType,
+      topType: selectedTopType,
+      topColor: selectedTopColor,
+    }" />
+  </template>
 
-<script>
-import Avataaars from '../Avataaars'
+  <script>
+  import Avataaars from 'vue-avataaars'
 
-export default {
-  name: 'Your component',
-  components: {
-    Avataaars,
-  },
-</script>
+  export default {
+    name: 'Your component',
+    components: {
+      Avataaars,
+    },
+  </script>
 ```
 
-- Using the Avataaars editor in addition to the Avataaars component :
+- Using the Avataaars for random avatar generation :
 ```vue
+  <template>
+    // No props, no problems
+    <Avataaars />
+  </template>
+  
+  <script>
+  import Avataaars from 'vue-avataaars'
 
+  export default {
+    name: 'Your component',
+    components: {
+      Avataaars,
+    },
+  </script>
 ```
 
 ## Props for the Avataaars component
@@ -124,17 +142,20 @@ export default {
 
     "clothesType": ["blazerShirt", "blazerSweater", "collarSweater", "graphicShirt", "hoodie", "overall", "shirtCrewNeck", "shirtScoopNeck", "shirtVNeck"],
     "clothesColor": ["black", "blue01", "blue02", "blue03", "gray01", "gray02", "heather", "pastelBlue", "pastelGreen", "pastelOrange", "pastelRed", "pastelYellow", "pink", "red", "white"],
-    "clothesGraphicsType": ["none", "bat", "cumbia", "deer", "diamond", "hola", "pizza", "resist", "selena", "bear", "skullOutline", "skull"],
+    "clothesGraphicsType": ["none", "bat", "cumbia", "diamond", "pizza", "resist", "selena", "bear", "skullOutline", "skull"],
     
-    "eyebrowType": ["angry", "angryNatural", "default", "defaultNatural", "flatNatural", "raisedExcited", "raisedExcitedNatural", "sadConcerned", "sadConcernedNatural", "unibrowNatural", "updown", "updownNatural"],
+    "eyebrowType": ["angry", "angryNatural", "default", "defaultNatural", "flatNatural", "frownNatural", "raisedExcited", "raisedExcitedNatural", "sadConcerned", "sadConcernedNatural", "unibrowNatural", "updown", "updownNatural"],
     "eyesType": ["close", "cry", "default", "dizzy", "eyeroll", "happy", "hearts", "side", "squint", "surprised", "wink", "winkWacky"],
     "mouthType": ["concerned", "default", "disbelief", "eating", "grimace", "sad", "screamOpen", "serious", "smile", "tongue", "twinkle", "vomit"],
     
-    "facialHairType": ["blank", "beardMedium", "beardLight", "beardMajestic", "moustacheFancy", "moustacheMagnum"],
+    "facialHairType": ["none", "beardMedium", "beardLight", "beardMajestic", "moustacheFancy", "moustacheMagnum"],
     "facialHairColor": ["auburn", "black", "blonde", "blondeGolden", "brown", "brownDark", "platinum", "red"],
 
-    "accessoriesType": ["blank", "kurt", "prescription01", "prescription02", "round", "sunglasses", "wayfarers"],
-    "topType": ["none", "eyepatch", "hat", "hijab", "turban", "winterHat1", "winterHat2", "winterHat3", "winterHat4", "longHairBigHair", "longHairBob", "longHairBun", "longHairCurly", "longHairCurvy", "longHairDreads", "longHairFrida", "longHairFro", "longHairFroBand", "longHairNotTooLong", "longHairShavedSides", "longHairMiaWallace", "longHairStraight", "longHairStraight2", "longHairStraightStrand", "shortHairDreads01", "shortHairDreads02", "shortHairFrizzle", "shortHairShaggyMullet", "shortHairShortCurly", "shortHairShortFlat", "shortHairShortRound", "shortHairShortWaved", "shortHairSides", "shortHairTheCaesar", "shortHairTheCaesarSidePart"],
-    "topColor": ["auburn", "black", "blonde", "blondeGolden", "brown", "brownDark", "platinum", "red"]
+    "accessoriesType": ["none", "eyepatch", "kurt", "prescription01", "prescription02", "round"],
+    "topType": ["none", "hat", "hijab", "turban", "winterHat1", "winterHat2", "winterHat3", "winterHat4", "longHairBigHair", "longHairBob", "longHairBun", "longHairCurly", "longHairCurvy", "longHairDreads", "longHairFro", "longHairFroBand", "longHairNotTooLong", "longHairShavedSides", "longHairMiaWallace", "longHairStraight", "longHairStraight2", "longHairStraightStrand", "shortHairDreads01", "shortHairDreads02", "shortHairFrizzle", "shortHairShaggyMullet", "shortHairShortCurly", "shortHairShortFlat", "shortHairShortRound", "shortHairShortWaved", "shortHairSides", "shortHairTheCaesar", "shortHairTheCaesarSidePart"],
+    "topColor": [
+        "auburn", "black", "blonde", "blondeGolden", "brown", "brownDark", "platinum", "red",
+        "blue01", "blue02", "blue03", "gray01", "gray02", "heather", "pastelBlue", "pastelGreen", "pastelOrange", "pastelRed", "pastelYellow", "pink", "red", "white"
+    ]
 }
 ```
