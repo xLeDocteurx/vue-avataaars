@@ -67,7 +67,7 @@
 
         <!-- Graphic -->
         <!-- props : type -->
-        <Graphics :type="graphic" />
+        <!-- <Graphics :type="graphic" /> -->
     </g>
 </template>
 

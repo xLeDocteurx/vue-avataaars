@@ -4,8 +4,8 @@
       <Eyebrow :type="eyebrowType" />
       <Nose />
       <Mouth :type="mouthType" />
-      <FacialHair :type="facialHairType" :color="facialHairColor" />
       <Top :type="topType" :color="topColor" />
+      <FacialHair :type="facialHairType" :color="facialHairColor" />
     </g>
 </template>
 

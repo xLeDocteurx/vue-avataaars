@@ -8,47 +8,36 @@
           Vue Avataaars
         </h1>
 
-        <!-- <div class="form-group row">
+        <div class="form-group row">
           <div class="col-sm-2">
           </div>
           <div class="col-sm-8">
-            <input v-model="inputValue" type="text" class="form-control form-control-sm" placeholder="Enter something">
+            <!-- <input v-model="inputValue" type="text" class="form-control form-control-sm" placeholder="Enter something"> -->
           </div>
           <div class="col-sm-2">
-            <button type="submit" style="margin-left: 1rem;" class="pull-right btn btn-secondary btn-sm">
+            <!-- <button v-on:click="forceUpdate" style="margin-left: 1rem;" class="inline btn btn-secondary btn-sm">
               <i class="fa fa-random"></i> 
               Random
-            </button>
-            {{ inputValue }}
+            </button> -->
+            <span class="inline custom-control custom-switch">
+              <input v-model="isRandom" type="checkbox" class="custom-control-input" id="customSwitch1">
+              <label class="custom-control-label" for="customSwitch1">Random</label>
+            </span>
+            <!-- {{ inputValue }} -->
           </div>
-        </div> -->
+        </div>
 
       </b-col>
 
       <b-col sm="12" md="4" class="text-center">
         <!-- <Avataaars /> -->
         <Avataaars 
-        :avatarOptions="{
-          backgroundType: selectedBackgroundType,
-          backgroundColor: selectedBackgroundColor,
-          skinColor: selectedSkinColor,
-          clothesType: selectedClothesType,
-          clothesColor: selectedClothesColor,
-          clothesGraphicsType: selectedClothesGraphicType,
-          eyesType: selectedEyesType,
-          eyebrowType: selectedEyebrowType,
-          mouthType: selectedMouthType,
-          facialHairType: selectedFacialHairType,
-          facialHairColor: selectedFacialHairColor,
-          accessoriesType: selectedAccessoriesType,
-          topType: selectedTopType,
-          topColor: selectedTopColor,
-        }" />
+        v-bind:avatarOptions="computedAvatarOptions" />
       </b-col>
 
       <b-col sm="12" md="8">
 
-        <b-card no-body class="mt-3">
+        <b-card v-if="isRandom == false" no-body class="mt-3">
           <b-tabs content-class="mt-3" pills card>
             <b-tab title="Body & Background">
               <b-form-group label="Skin Color">
@@ -182,10 +171,28 @@ export default {
     Avataaars,
   },
   computed: {
-
+    computedAvatarOptions() {
+      return this.isRandom ? null : {
+        backgroundType: this.selectedBackgroundType,
+        backgroundColor: this.selectedBackgroundColor,
+        skinColor: this.selectedSkinColor,
+        clothesType: this.selectedClothesType,
+        clothesColor: this.selectedClothesColor,
+        clothesGraphicsType: this.selectedClothesGraphicType,
+        eyesType: this.selectedEyesType,
+        eyebrowType: this.selectedEyebrowType,
+        mouthType: this.selectedMouthType,
+        facialHairType: this.selectedFacialHairType,
+        facialHairColor: this.selectedFacialHairColor,
+        accessoriesType: this.selectedAccessoriesType,
+        topType: this.selectedTopType,
+        topColor: this.selectedTopColor,
+      }
+    }
   },
   data() {
     return {
+      isRandom: false,
       inputValue: '',
 
       options: optionsJSON,
@@ -213,7 +220,9 @@ export default {
     }
   },
   methods: {
-
+    toggleRandom() {
+      this.isRandom = !this.isRandom
+    }
   },
   mounted() {
 
