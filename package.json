@@ -11,9 +11,7 @@
     "url": "git+https://github.com/xLeDocteurx/vue-avataaars.git"
   },
   "bundleDependencies": false,
-  "dependencies": {
-
-  },
+  "dependencies": {},
   "keywords": [
     "avataaars",
     "avatar",

@@ -1,5 +1,3 @@
-const Avataaars = require('./Avataaars.vue')
+import Avataaars from './Avataaars.vue'
 
-module.exports = () => {
-    Avataaars
-}
+export default Avataaars
