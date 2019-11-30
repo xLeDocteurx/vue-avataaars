@@ -11,7 +11,9 @@ This is a port from  Sketch library [Avataaars](https://avataaars.com/) designed
 <p align="center"><img src='avataaars-example.png?raw=true' /></p>
 
 I am deeply sorry for the first 80 users who downloaded it.
-I had ( and maybe still have some troubles with the distribution of this plugin as it is my first npm package. If the classic way of importing the component does not work. please use the src folder found in nodes_modules/vue-avataaars )
+I had some troubles with the distribution of this plugin as it is my first npm package.
+
+If you have any trouble with it or want to suggest something come to [GitHub](https://github.com/xLeDocteurx/vue-avataaars/issues) or [Gitter](https://gitter.im/vue-avataaars/community)
 
 ## Features
  - SVG based
@@ -21,16 +23,14 @@ I had ( and maybe still have some troubles with the distribution of this plugin 
  - Easy to integrate with custom editor
  - Comes from [Avataaars](https://avataaars.com/)
 
-#### Roadmap to 0.0.x
-- Clothes graphics.
-
 #### Roadmap to 0.1.0
+- Clothes graphics.
 - Feed the Avataaars component with a string or an email hash to procedurally generate an avatar.
-( Just like the way the gravatar API works )
+( Just like the way the gravatar robothash API works )
 
 #### Roadmap to 0.2.0
-- Fully customizable Avataaars editor.
-- Getting rid of Bootstrap Vue in the editor.
+- Fully customizable avatar editor component.
+- Getting rid of Bootstrap Vue in the editor component.
 
 #### Roadmap to 1.0.0
 - PNG export/generation
@@ -47,10 +47,11 @@ Import the Avataaars component. Pass it an object called "avatarOptions" with so
 npm install vue-avataaars --save
 ```
 
+( If the classic way of importing the component does not work. please use the src folder found in nodes_modules/vue-avataaars )
 ## Usage
 
 - Using the Avataaars component with an avatarOptions input :
-```vue
+```html
   <template>
     <Avataaars 
     // You can any size as it does not exceed the maxWidth and maxHeight properties
@@ -87,7 +88,7 @@ npm install vue-avataaars --save
 ```
 
 - Using the Avataaars for random avatar generation :
-```vue
+```html
   <template>
     // No props, no problems
     <Avataaars />
@@ -105,7 +106,7 @@ npm install vue-avataaars --save
 ```
 
 ## Props for the Avataaars component
-```vue
+```html
     iconName: {
       type: String,
       default: 'avatar',
