@@ -10,6 +10,9 @@ This is a port from  Sketch library [Avataaars](https://avataaars.com/) designed
 
 <p align="center"><img src='avataaars-example.png?raw=true' /></p>
 
+I am deeply sorry for the first 80 users who downloaded it.
+I had ( and maybe still have some troubles with the distribution of this plugin as it is my first npm package. If the classic way of importing the component does not work. please use the src folder found in nodes_modules/vue-avataaars )
+
 ## Features
  - SVG based
  - Light weight

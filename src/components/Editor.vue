@@ -162,7 +162,7 @@
 </template>
 
 <script>
-import Avataaars from '../Avataaars'
+import Avataaars from './Avataaars'
 import optionsJSON from '../avataaarsOptions.json'
 
 export default {

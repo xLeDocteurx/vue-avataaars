@@ -1,0 +1,41 @@
+{
+  "name": "vue-avataaars",
+  "version": "0.0.4",
+  "description": "A Vue js component for avataaars",
+  "main": "dist/vue-avataaars.common.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-bundle": "vue-cli-service build --target lib --name vue-avataaars ./index.js"
+  },
+  "files": [
+    "dist/*",
+    "src/*",
+    "public/*",
+    "*.json",
+    "*.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xLeDocteurx/vue-avataaars.git"
+  },
+  "bundleDependencies": false,
+  "keywords": [
+    "avataaars",
+    "avatar",
+    "avatars",
+    "editor",
+    "vue",
+    "vuejs",
+    "vue-js",
+    "component"
+  ],
+  "author": {
+    "name": "xLeDocteurx",
+    "email": "lenoirc.fr@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xLeDocteurx/vue-avataaars/issues"
+  },
+  "homepage": "https://github.com/xLeDocteurx/vue-avataaars#readme"
+}

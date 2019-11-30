@@ -1,6 +1,6 @@
 <template>
-    <svg
-    xmlns="http://www.w3c.org/2000/"
+    <svg 
+    xmlns="http://www.w3.org/2000/svg"
     :width="width"
     :height="height"
     :viewBox="`0 0 ${maxWidth} ${maxHeight}`"
@@ -31,13 +31,13 @@
 <script>
 // import { mapState } from 'vuex'
 
-import Background from './icons/background/Background'
-import Body from './icons/Body'
-import Clothes from './icons/clothes/Clothes'
-import Face from './icons/face/Face'
-import Accessories from './icons/top/accessories/Accessories'
+import Background from '../icons/background/Background'
+import Body from '../icons/Body'
+import Clothes from '../icons/clothes/Clothes'
+import Face from '../icons/face/Face'
+import Accessories from '../icons/top/accessories/Accessories'
 
-import optionsJSON from './avataaarsOptions.json'
+import optionsJSON from '../avataaarsOptions.json'
 
 export default {
   name: 'Avataaars',

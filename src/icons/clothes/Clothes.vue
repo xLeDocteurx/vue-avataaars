@@ -73,7 +73,7 @@
 
 
 <script>
-import Graphics from './Graphics'
+// import Graphics from './Graphics'
 
 import graphicShirtJSON from './GraphicShirt.json'
 import blazerShirtJSON from './BlazerShirt.json'
@@ -88,7 +88,7 @@ import ShirtVNeckJSON from './ShirtVNeck.json'
 export default {
   name: 'Clothes',
   components: {
-    Graphics,
+    // Graphics,
   },
   props: {
     type: {

@@ -30,7 +30,7 @@
 </template>
 
 <script>
-import Editor from "../../editor/Editor";
+import Editor from "./components/Editor";
 
 export default {
   name: "app",

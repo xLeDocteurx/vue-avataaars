@@ -147,7 +147,7 @@ export default {
             pastelRed: '#FFAFB9',
             pastelYellow: '#FFFFB1',
             pink: '#FF488E',
-            red: '#FF5C5C',
+            red01: '#FF5C5C',
             white: '#FFFFFF',
         },
         types: {
