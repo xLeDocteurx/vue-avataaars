@@ -1,24 +1,103 @@
 {
-    "backgroundType": ["circle", "transparent"],
-    "backgroundColor": ["black", "blue01", "blue02", "blue03", "gray01", "gray02", "heather", "pastelBlue", "pastelGreen", "pastelOrange", "pastelRed", "pastelYellow", "pink", "red", "white"],
-
-    "skinColor": ["tanned", "yellow", "pale", "light", "brown", "darkBrown", "dark"],
-
-    "clothesType": ["blazerShirt", "blazerSweater", "collarSweater", "graphicShirt", "hoodie", "overall", "shirtCrewNeck", "shirtScoopNeck", "shirtVNeck"],
-    "clothesColor": ["black", "blue01", "blue02", "blue03", "gray01", "gray02", "heather", "pastelBlue", "pastelGreen", "pastelOrange", "pastelRed", "pastelYellow", "pink", "red", "white"],
-    "clothesGraphicsType": ["none", "bat", "cumbia", "diamond", "pizza", "resist", "selena", "bear", "skullOutline", "skull"],
+  "tabs": [
+    {
+      "title": "Body & Background",
+      "labels": [
+        {
+          "name" : "Background Type",
+          "options" : ["circle", "transparent"],
+          "default" : "circle"
+        },
+        {
+          "name" : "Background Color",
+          "options": ["black", "blue01", "blue02", "blue03", "gray01", "gray02", "heather", "pastelBlue", "pastelGreen", "pastelOrange", "pastelRed", "pastelYellow", "pink", "red", "white"],
+          "default" : "pink"
+        },
+        {
+          "name" : "Skin Color",
+          "options" : ["tanned", "yellow", "pale", "light", "brown", "darkBrown", "dark"],
+          "default" : "light"
+        }
+      ]
+    },
     
-    "eyebrowType": ["angry", "angryNatural", "default", "defaultNatural", "flatNatural", "frownNatural", "raisedExcited", "raisedExcitedNatural", "sadConcerned", "sadConcernedNatural", "unibrowNatural", "updown", "updownNatural"],
-    "eyesType": ["close", "cry", "default", "dizzy", "eyeroll", "happy", "hearts", "side", "squint", "surprised", "wink", "winkWacky"],
-    "mouthType": ["concerned", "default", "disbelief", "eating", "grimace", "sad", "screamOpen", "serious", "smile", "tongue", "twinkle", "vomit"],
-    
-    "facialHairType": ["none", "beardMedium", "beardLight", "beardMajestic", "moustacheFancy", "moustacheMagnum"],
-    "facialHairColor": ["auburn", "black", "blonde", "blondeGolden", "brown", "brownDark", "platinum", "red"],
+    {
+      "title":"Face",
+      "labels" :[ 
+        {
+          "name": "Eyebrow Type",
+          "options": ["angry", "angryNatural", "default", "defaultNatural", "flatNatural", "frownNatural", "raisedExcited", "raisedExcitedNatural", "sadConcerned", "sadConcernedNatural", "unibrowNatural", "updown", "updownNatural"],
+          "default" : "raisedExcited"
+        },
+        {
+          "name":"Eyes Type",
+          "options": ["close", "cry", "default", "dizzy", "eyeroll", "happy", "hearts", "side", "squint", "surprised", "wink", "winkWacky"],
+          "default" : "squint"
+        },
+        {
+          "name": "Mouth Type",
+          "options": ["concerned", "default", "disbelief", "eating", "grimace", "sad", "screamOpen", "serious", "smile", "tongue", "twinkle", "vomit"],
+          "default" : "smile"
+        }, 
+        {
+          "name": "Facial Hair Type",
+          "options": ["none", "beardMedium", "beardLight", "beardMajestic", "moustacheFancy", "moustacheMagnum"],
+          "default" : "beardLight"
+        },
+        {
+          "name": "Facial Hair Color",
+          "options": ["auburn", "black", "blonde", "blondeGolden", "brown", "brownDark", "platinum", "red"],
+          "default" : "brownDark"
+        }
+      ]
+    },
+    {
+      "title": "Accessories", 
+      "labels": [
+        {
+          "name": "Accessories Type",
+          "options": ["none", "eyepatch", "kurt", "prescription01", "prescription02", "round"],
+          "default" : "round"
+        }
+      ]
+    },
+    {
 
-    "accessoriesType": ["none", "eyepatch", "kurt", "prescription01", "prescription02", "round"],
-    "topType": ["none", "hat", "hijab", "turban", "winterHat1", "winterHat2", "winterHat3", "winterHat4", "longHairBigHair", "longHairBob", "longHairBun", "longHairCurly", "longHairCurvy", "longHairDreads", "longHairFro", "longHairFroBand", "longHairNotTooLong", "longHairShavedSides", "longHairMiaWallace", "longHairStraight", "longHairStraight2", "longHairStraightStrand", "shortHairDreads01", "shortHairDreads02", "shortHairFrizzle", "shortHairShaggyMullet", "shortHairShortCurly", "shortHairShortFlat", "shortHairShortRound", "shortHairShortWaved", "shortHairSides", "shortHairTheCaesar", "shortHairTheCaesarSidePart"],
-    "topColor": [
-        "auburn", "black", "blonde", "blondeGolden", "brown", "brownDark", "platinum", "red",
-        "blue01", "blue02", "blue03", "gray01", "gray02", "heather", "pastelBlue", "pastelGreen", "pastelOrange", "pastelRed", "pastelYellow", "pink", "red01", "white"
-    ]
+      "title": "Hair or Top",
+      "labels" : [
+        {
+          "name" : "Top Type",
+          "options": ["none", "hat", "hijab", "turban", "winterHat1", "winterHat2", "winterHat3", "winterHat4", "longHairBigHair", "longHairBob", "longHairBun", "longHairCurly", "longHairCurvy", "longHairDreads", "longHairFro", "longHairFroBand", "longHairNotTooLong", "longHairShavedSides", "longHairMiaWallace", "longHairStraight", "longHairStraight2", "longHairStraightStrand", "shortHairDreads01", "shortHairDreads02", "shortHairFrizzle", "shortHairShaggyMullet", "shortHairShortCurly", "shortHairShortFlat", "shortHairShortRound", "shortHairShortWaved", "shortHairSides", "shortHairTheCaesar", "shortHairTheCaesarSidePart"],
+          "default" : "none"
+        },
+        {
+          "name" : "Top Color",
+          "options": [
+            "auburn", "black", "blonde", "blondeGolden", "brown", "brownDark", "platinum", "red",
+            "blue01", "blue02", "blue03", "gray01", "gray02", "heather", "pastelBlue", "pastelGreen", "pastelOrange", "pastelRed", "pastelYellow", "pink", "red01", "white"],
+          "default" : "brownDark"
+        }
+      ]
+    },
+    {
+      "title": "Clothes", 
+      "labels": [
+        {
+          "name":"Clothes Type",
+          "options": ["blazerShirt", "blazerSweater", "collarSweater", "graphicShirt", "hoodie", "overall", "shirtCrewNeck", "shirtScoopNeck", "shirtVNeck"],
+          "default" : "hoodie"
+        },
+        { 
+          "name" : "Clothes Color",
+          "options": ["black", "blue01", "blue02", "blue03", "gray01", "gray02", "heather", "pastelBlue", "pastelGreen", "pastelOrange", "pastelRed", "pastelYellow", "pink", "red", "white"],
+          "default" : "pink"
+        },
+        {
+          "name":"Clothes Graphics Type",
+          "options": ["none", "bat", "cumbia", "diamond", "pizza", "resist", "selena", "bear", "skullOutline", "skull"],
+          "default" : "none"
+        }
+      ]
+    }
+  ]
 }
