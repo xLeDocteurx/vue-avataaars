@@ -103,6 +103,11 @@ export default {
     }
   },
   methods: {
+    updateOption(data){
+      data.forEach(o => {
+        this[o.label_name] = o.value
+      })
+    },
     }
   },
   mounted() {
