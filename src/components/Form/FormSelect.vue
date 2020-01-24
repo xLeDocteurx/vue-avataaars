@@ -19,6 +19,7 @@
 
 <script>
 	import Select from "./Select"
+	import { camelCase } from "lodash"
 
 	export default {
 		name: 'FormSelect',
@@ -48,6 +49,9 @@
 				})
 			})
 		},
+			formatLabelName(name){
+				return camelCase(name)
+			}
 		}
 	}
 </script>
