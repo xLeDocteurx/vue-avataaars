@@ -108,6 +108,13 @@ export default {
         this[o.label_name] = o.value
       })
     },
+    randomAvatar(){
+      this.options.forEach(option => {
+        option.labels.forEach(label => {
+          this[camelCase(label.name)] = label.options[Math.floor(Math.random() * Math.floor(label.options.length))]
+        })
+
+      })
     }
   },
   mounted() {
