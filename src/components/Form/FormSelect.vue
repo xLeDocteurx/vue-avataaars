@@ -34,6 +34,20 @@
 				type: Array,
 				required: true
 			}
+		},
+		data(){
+			return {
+				options: []
+			}
+		},
+		mounted() {
+			this.labels.forEach(label => {
+				this.options.push({
+					label_name: this.formatLabelName(label.name),
+					value: label.default
+				})
+			})
+		},
 		}
 	}
 </script>
