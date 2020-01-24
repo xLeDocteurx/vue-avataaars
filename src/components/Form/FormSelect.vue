@@ -1,5 +1,14 @@
 <template>
-
+	<b-tab 
+		:title="title"
+		>
+		<b-form-group 
+			v-for="label in labels"
+			:label="label.name"
+			:key="label.name"
+			>
+		</b-form-group>
+	</b-tab>
 </template>
 
 <script>
