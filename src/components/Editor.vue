@@ -34,7 +34,7 @@
       </b-col>
 
       <b-col sm="12" md="8">
-        <b-card v-if="isRandom == false" no-body class="mt-3">
+        <b-card no-body class="mt-3">
           <b-tabs content-class="mt-3" pills card>
             <FormSelect
               v-for="option in options"

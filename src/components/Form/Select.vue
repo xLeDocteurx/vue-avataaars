@@ -38,7 +38,6 @@
 		},
 		methods: {
 			selectedValue() {
-				console.log(this.selected.label_name, this.selected.value)
 				this.$emit('change_input_value', this.selected)
 			}
 		}
