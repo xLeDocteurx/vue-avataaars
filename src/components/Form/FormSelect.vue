@@ -49,6 +49,15 @@
 				})
 			})
 		},
+		methods: {
+			getInputChange(data){
+				this.options.find(option => {
+					if(data.label_name === option.label_name){
+						option.value = data.value
+					} 
+				});
+				this.$emit('updated_option_value', this.options)
+			},
 			formatLabelName(name){
 				return camelCase(name)
 			}
