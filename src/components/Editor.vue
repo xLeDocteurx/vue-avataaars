@@ -64,34 +64,27 @@ export default {
   },
   data() {
     return {
-      isRandom: false,
       inputValue: '',
-
-      options: optionsJSON,
-
-      selectedBackgroundType: 'circle',
-      selectedBackgroundColor: 'pastelGreen',
-      
-      selectedSkinColor: 'light',
-
-      selectedClothesColor: 'pink',
-      selectedClothesType: 'hoodie',
-      // selectedClothesGraphicType: 'pizza',
-      selectedClothesGraphicType: 'none',
-
-      selectedEyebrowType: 'raisedExcited',
-      selectedEyesType: 'squint',
-      selectedMouthType: 'smile',
-
-      selectedFacialHairType: 'beardLight',
-      selectedFacialHairColor: 'brownDark',
-
-      selectedTopType: 'none',
-      selectedTopColor: 'brownDark',
-      selectedAccessoriesType: 'round',
+      options: optionsJSON.tabs,
+      backgroundType: "",
+      backgroundColor: "",
+      skinColor: "",
+      clothesType: "",
+      clothesColor: "",
+      clothesGraphicsType: "",
+      eyesType: "",
+      eyebrowType: "",
+      mouthType: "",
+      facialHairType: "",
+      facialHairColor: "",
+      accessoriesType: "",
+      topType: "",
+      topColor: ""
+    }
+  },
   computed: {
     computedAvatarOptions: function() {
-      return this.isRandom ? null : {
+      return {
         backgroundType: this.backgroundType,
         backgroundColor: this.backgroundColor,
         skinColor: this.skinColor,
