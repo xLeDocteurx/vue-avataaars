@@ -15,13 +15,11 @@
             <!-- <input v-model="inputValue" type="text" class="form-control form-control-sm" placeholder="Enter something"> -->
           </div>
           <div class="col-sm-2">
-            <!-- <button v-on:click="forceUpdate" style="margin-left: 1rem;" class="inline btn btn-secondary btn-sm">
-              <i class="fa fa-random"></i> 
-              Random
-            </button> -->
             <span class="inline custom-control custom-switch">
-              <input v-model="isRandom" type="checkbox" class="custom-control-input" id="customSwitch1">
-              <label class="custom-control-label" for="customSwitch1">Random</label>
+              <b-button @click="randomAvatar">
+                <i class="fa fa-random"></i> 
+                Random
+              </b-button>
             </span>
             <!-- {{ inputValue }} -->
           </div>
