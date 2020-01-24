@@ -103,8 +103,6 @@ export default {
     }
   },
   methods: {
-    toggleRandom() {
-      this.isRandom = !this.isRandom
     }
   },
   mounted() {
