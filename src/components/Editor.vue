@@ -60,26 +60,7 @@ export default {
   name: 'Editor',
   components: {
     Avataaars,
-  },
-  computed: {
-    computedAvatarOptions() {
-      return this.isRandom ? null : {
-        backgroundType: this.selectedBackgroundType,
-        backgroundColor: this.selectedBackgroundColor,
-        skinColor: this.selectedSkinColor,
-        clothesType: this.selectedClothesType,
-        clothesColor: this.selectedClothesColor,
-        clothesGraphicsType: this.selectedClothesGraphicType,
-        eyesType: this.selectedEyesType,
-        eyebrowType: this.selectedEyebrowType,
-        mouthType: this.selectedMouthType,
-        facialHairType: this.selectedFacialHairType,
-        facialHairColor: this.selectedFacialHairColor,
-        accessoriesType: this.selectedAccessoriesType,
-        topType: this.selectedTopType,
-        topColor: this.selectedTopColor,
-      }
-    }
+    FormSelect
   },
   data() {
     return {
@@ -108,6 +89,24 @@ export default {
       selectedTopType: 'none',
       selectedTopColor: 'brownDark',
       selectedAccessoriesType: 'round',
+  computed: {
+    computedAvatarOptions: function() {
+      return this.isRandom ? null : {
+        backgroundType: this.backgroundType,
+        backgroundColor: this.backgroundColor,
+        skinColor: this.skinColor,
+        clothesType: this.clothesType,
+        clothesColor: this.clothesColor,
+        clothesGraphicsType: this.clothesGraphicType,
+        eyesType: this.eyesType,
+        eyebrowType: this.eyebrowType,
+        mouthType: this.mouthType,
+        facialHairType: this.facialHairType,
+        facialHairColor: this.facialHairColor,
+        accessoriesType: this.accessoriesType,
+        topType: this.topType,
+        topColor: this.topColor,
+      }
     }
   },
   methods: {
