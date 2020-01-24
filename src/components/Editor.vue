@@ -117,8 +117,12 @@ export default {
       })
     }
   },
-  mounted() {
-
+  beforeMount() {
+    this.options.map(option => {
+      option.labels.forEach(label => {
+        this[camelCase(label.name)] = label.default
+      })
+    })
   }
 }
 </script>
