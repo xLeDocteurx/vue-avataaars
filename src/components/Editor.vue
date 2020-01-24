@@ -45,17 +45,16 @@
             />
           </b-tabs>
         </b-card>
-
       </b-col>
-
     </b-row>
-
   </b-container>
 </template>
 
 <script>
 import Avataaars from './Avataaars'
 import optionsJSON from '../avataaarsOptions.json'
+import FormSelect from './Form/FormSelect'
+import { camelCase } from "lodash"
 
 export default {
   name: 'Editor',
