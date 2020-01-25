@@ -164,3 +164,12 @@ npm install vue-avataaars --save
     ]
 }
 ```
+
+
+## Contributors
+
+[//]: contributor-faces
+
+<a href="https://github.com/AllanCerveaux"><img src="https://avatars1.githubusercontent.com/u/16000854?s=460&v=4" title="Callan" width="80" height="80"></a>
+
+[//]: contributor-faces
