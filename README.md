@@ -136,8 +136,6 @@ https://github.com/xLeDocteurx/vue-avataaars/blob/master/src/avataaarsOptions.js
 
 [//]: contributor-faces
 
-<a href="https://github.com/AllanCerveaux"><img src="https://avatars1.githubusercontent.com/u/16000854?s=460&v=4" title="Callan" width="80" height="80"></a>
-
-<a href="https://github.com/xLeDocteurx"><img src="https://avatars0.githubusercontent.com/u/26012160?s=460&v=4" title="Lenoir Christopher" width="80" height="80"></a>
+<a href="https://github.com/AllanCerveaux"><img src="https://avatars1.githubusercontent.com/u/16000854?s=460&v=4" title="Callan" width="80" height="80"></a><a href="https://github.com/xLeDocteurx"><img src="https://avatars0.githubusercontent.com/u/26012160?s=460&v=4" title="Lenoir Christopher" width="80" height="80"></a>
 
 [//]: contributor-faces
