@@ -14,15 +14,34 @@
         {{ iconName }}
       </title>
 
-      <Background :type="avatarOptions ? avatarOptions.backgroundType : options.backgroundType[Math.floor(Math.random() * Math.floor(options.backgroundType.length))]" :color="avatarOptions ? avatarOptions.backgroundColor : options.backgroundColor[Math.floor(Math.random() * Math.floor(options.backgroundColor.length))]" />
+      <Background 
+        :type="avatarOptions.backgroundType" 
+        :color="avatarOptions.backgroundColor" 
+      />
 
-      <Body :color="avatarOptions ? avatarOptions.skinColor : options.skinColor[Math.floor(Math.random() * Math.floor(options.skinColor.length))]" />
+      <Body 
+        :color="avatarOptions.skinColor" 
+      />
 
-      <Clothes :type="avatarOptions ? avatarOptions.clothesType : options.clothesType[Math.floor(Math.random() * Math.floor(options.clothesType.length))]" :color="avatarOptions ? avatarOptions.clothesColor : options.clothesColor[Math.floor(Math.random() * Math.floor(options.clothesColor.length))]" :graphic="avatarOptions ? avatarOptions.clothesGraphicsType : options.clothesGraphicsType[Math.floor(Math.random() * Math.floor(options.clothesGraphicsType.length))]"/>
+      <Clothes 
+        :type="avatarOptions.clothesType" 
+        :color="avatarOptions.clothesColor" 
+        :graphic="avatarOptions.clothesGraphicsType"
+      />
             
-      <Face :eyebrowType="avatarOptions ? avatarOptions.eyebrowType : options.eyebrowType[Math.floor(Math.random() * Math.floor(options.eyebrowType.length))]" :eyesType="avatarOptions ? avatarOptions.eyesType : options.eyesType[Math.floor(Math.random() * Math.floor(options.eyesType.length))]" :mouthType="avatarOptions ? avatarOptions.mouthType : options.mouthType[Math.floor(Math.random() * Math.floor(options.mouthType.length))]" :facialHairType="avatarOptions ? avatarOptions.facialHairType : options.facialHairType[Math.floor(Math.random() * Math.floor(options.facialHairType.length))]" :facialHairColor="avatarOptions ? avatarOptions.facialHairColor : options.facialHairColor[Math.floor(Math.random() * Math.floor(options.facialHairColor.length))]" :topType="avatarOptions ? avatarOptions.topType : options.topType[Math.floor(Math.random() * Math.floor(options.topType.length))]" :topColor="avatarOptions ? avatarOptions.topColor : options.topColor[Math.floor(Math.random() * Math.floor(options.topColor.length))]" />
+      <Face 
+        :eyebrowType="avatarOptions.eyebrowType" 
+        :eyesType="avatarOptions.eyesType" 
+        :mouthType="avatarOptions.mouthType" 
+        :facialHairType="avatarOptions.facialHairType" 
+        :facialHairColor="avatarOptions.facialHairColor" 
+        :topType="avatarOptions.topType" 
+        :topColor="avatarOptions.topColor" 
+        />
 
-      <Accessories :type="avatarOptions ? avatarOptions.accessoriesType : options.accessoriesType[Math.floor(Math.random() * Math.floor(options.accessoriesType.length))]" />
+      <Accessories 
+        :type="avatarOptions.accessoriesType" 
+      />
 
     </svg>
 </template>
@@ -75,19 +94,20 @@ export default {
       required: false,
     },
     avatarOptions: {
-      type: Object, required: false
+      type: Object,
+      required: false
     },
   },
   data() {
     return {
-      options: optionsJSON,
+      options: optionsJSON.tabs,
     }
   },
   methods: {
     forceUpdate() {
       this.$forceUpdate()
     }
-  },
+  }
 }
 </script>
 
