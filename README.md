@@ -122,45 +122,20 @@ npm install vue-avataaars --save
       default: 280,
       required: false,
     },
-    maxWidth: {
-      type: Number,
-      default: 264,
-      required: false,
-    },
-    maxHeight: {
-      type: Number,
-      default: 280,
-      required: false,
-    },
     avatarOptions: {
       type: Object, required: false
     },
 ```
 
 ## Props of avatarOptions
-```
-{
-    "backgroundType": ["circle", "transparent"],
-    "backgroundColor": ["black", "blue01", "blue02", "blue03", "gray01", "gray02", "heather", "pastelBlue", "pastelGreen", "pastelOrange", "pastelRed", "pastelYellow", "pink", "red", "white"],
+A complète list of every options can be found here in the "./scr/avataaarsOptions.json" :
+https://github.com/xLeDocteurx/vue-avataaars/blob/master/src/avataaarsOptions.json
 
-    "skinColor": ["tanned", "yellow", "pale", "light", "brown", "darkBrown", "dark"],
 
-    "clothesType": ["blazerShirt", "blazerSweater", "collarSweater", "graphicShirt", "hoodie", "overall", "shirtCrewNeck", "shirtScoopNeck", "shirtVNeck"],
-    "clothesColor": ["black", "blue01", "blue02", "blue03", "gray01", "gray02", "heather", "pastelBlue", "pastelGreen", "pastelOrange", "pastelRed", "pastelYellow", "pink", "red", "white"],
-    "clothesGraphicsType": ["none", "bat", "cumbia", "diamond", "pizza", "resist", "selena", "bear", "skullOutline", "skull"],
-    
-    "eyebrowType": ["angry", "angryNatural", "default", "defaultNatural", "flatNatural", "frownNatural", "raisedExcited", "raisedExcitedNatural", "sadConcerned", "sadConcernedNatural", "unibrowNatural", "updown", "updownNatural"],
-    "eyesType": ["close", "cry", "default", "dizzy", "eyeroll", "happy", "hearts", "side", "squint", "surprised", "wink", "winkWacky"],
-    "mouthType": ["concerned", "default", "disbelief", "eating", "grimace", "sad", "screamOpen", "serious", "smile", "tongue", "twinkle", "vomit"],
-    
-    "facialHairType": ["none", "beardMedium", "beardLight", "beardMajestic", "moustacheFancy", "moustacheMagnum"],
-    "facialHairColor": ["auburn", "black", "blonde", "blondeGolden", "brown", "brownDark", "platinum", "red"],
+## Contributors
 
-    "accessoriesType": ["none", "eyepatch", "kurt", "prescription01", "prescription02", "round"],
-    "topType": ["none", "hat", "hijab", "turban", "winterHat1", "winterHat2", "winterHat3", "winterHat4", "longHairBigHair", "longHairBob", "longHairBun", "longHairCurly", "longHairCurvy", "longHairDreads", "longHairFro", "longHairFroBand", "longHairNotTooLong", "longHairShavedSides", "longHairMiaWallace", "longHairStraight", "longHairStraight2", "longHairStraightStrand", "shortHairDreads01", "shortHairDreads02", "shortHairFrizzle", "shortHairShaggyMullet", "shortHairShortCurly", "shortHairShortFlat", "shortHairShortRound", "shortHairShortWaved", "shortHairSides", "shortHairTheCaesar", "shortHairTheCaesarSidePart"],
-    "topColor": [
-        "auburn", "black", "blonde", "blondeGolden", "brown", "brownDark", "platinum", "red",
-        "blue01", "blue02", "blue03", "gray01", "gray02", "heather", "pastelBlue", "pastelGreen", "pastelOrange", "pastelRed", "pastelYellow", "pink", "red", "white"
-    ]
-}
-```
+[//]: contributor-faces
+
+<a href="https://github.com/AllanCerveaux"><img src="https://avatars1.githubusercontent.com/u/16000854?s=460&v=4" title="Callan" width="80" height="80"></a><a href="https://github.com/xLeDocteurx"><img src="https://avatars0.githubusercontent.com/u/26012160?s=460&v=4" title="Lenoir Christopher" width="80" height="80"></a>
+
+[//]: contributor-faces
