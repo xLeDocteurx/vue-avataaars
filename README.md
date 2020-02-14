@@ -54,7 +54,7 @@ npm install vue-avataaars --save
 ```html
   <template>
     <Avataaars 
-    // You can any size as it does not exceed the maxWidth and maxHeight properties
+    // You can set any size as it does not exceed the maxWidth and maxHeight properties (264px by 280px)
     :width=200
     :height=200
     // Your avatar options
